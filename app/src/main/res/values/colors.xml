@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#000000</color>
+    <color name="colorSecondaryVariant">#B4B4B4</color>
+    <color name="colorError">#E53935</color> <!-- Red 600 -->
+    <color name="colorPrimaryDark">#C2C2C2</color>
 </resources>
