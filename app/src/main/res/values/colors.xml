@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorSecondary">#000000</color>
-    <color name="colorSecondaryVariant">#B4B4B4</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryVariant">#969595</color>
     <color name="colorError">#E53935</color> <!-- Red 600 -->
     <color name="colorPrimaryDark">#C2C2C2</color>
 </resources>

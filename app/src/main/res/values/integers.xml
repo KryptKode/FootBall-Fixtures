@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="bottom_nav_icon_size">48</integer>
+    <integer name="bottom_nav_icon_size">40</integer>
+    <integer name="competition_list_text_max_lines">2</integer>
+    <integer name="matches_list_text_max_lines">2</integer>
 </resources>

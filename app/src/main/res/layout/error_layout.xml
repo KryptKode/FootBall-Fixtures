@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        style="@style/ErrorLayout.Root.Card">
+
+        <RelativeLayout style="@style/ErrorLayout.Root">
+
+            <androidx.core.widget.NestedScrollView style="@style/ErrorLayout.Root">
+
+                <androidx.constraintlayout.widget.ConstraintLayout style="@style/ErrorLayout.Root.Constraint">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_l"
+                        style="@style/Guideline.Vertical.Left" />
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_r"
+                        style="@style/Guideline.Vertical.Right" />
+
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        style="@style/ErrorLayout.Icon"
+                        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+                        app:layout_constraintStart_toStartOf="@id/guideline_l"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+
+                    <TextView
+                        android:id="@+id/tv_message"
+                        style="@style/ErrorLayout.Message"
+                        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+                        app:layout_constraintStart_toStartOf="@id/guideline_l"
+                        app:layout_constraintTop_toBottomOf="@id/icon"
+                        tools:text="Fluctuis sunt gloss de flavum idoleum. Sunt caesiumes locus rusticus, altus decores." />
+
+
+                    <Button
+                        android:id="@+id/btn_retry"
+                        style="@style/ErrorLayout.Retry"
+                        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+                        app:layout_constraintStart_toStartOf="@id/guideline_l"
+                        app:layout_constraintTop_toBottomOf="@id/tv_message" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

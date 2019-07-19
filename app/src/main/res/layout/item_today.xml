@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Fixtures.Item.Root">
+
+
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/Fixtures.Item.Text.Status"
+            app:layout_constraintBottom_toTopOf="@id/tv_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/Fixtures.Item.Text.Time"
+            app:layout_constraintBottom_toTopOf="@id/tv_md"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_status"
+            tools:text="@tools:sample/date/hhmm" />
+
+
+        <TextView
+            android:id="@+id/tv_md"
+            style="@style/Fixtures.Item.Text.Md"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time"
+            tools:text="@tools:sample/date/hhmm" />
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_end"
+            style="@style/Barrier.End"
+            app:constraint_referenced_ids="tv_status,tv_time,tv_md"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_team_home"
+            style="@style/Fixtures.Item.Text.Team"
+            app:layout_constraintEnd_toStartOf="@id/tv_score"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/barrier_end"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/tv_team_away"
+            style="@style/Fixtures.Item.Text.Team"
+            app:layout_constraintEnd_toStartOf="@id/tv_score"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/barrier_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_team_home"
+            tools:text="@tools:sample/full_names" />
+
+
+        <TextView
+            android:id="@+id/tv_score_home"
+            style="@style/Fixtures.Item.Text.Score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0" />
+
+        <TextView
+            android:id="@+id/tv_score_away"
+            style="@style/Fixtures.Item.Text.Score"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="0" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_start"
+            style="@style/Barrier.Start"
+            app:constraint_referenced_ids="tv_score_home,tv_score_away"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            style="@style/Fixtures.Item.Text.Score.Small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/barrier_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

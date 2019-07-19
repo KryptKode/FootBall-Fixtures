@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#706E6E</color>
     <color name="colorSecondary">#DFD9D9</color>
+    <color name="colorOnSecondary">#000000</color>
     <color name="colorSecondaryVariant">#706F6F</color>
     <color name="colorError">#Ef9A9A</color> <!-- Red 200 -->
 </resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/EmptyLayout.Root">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_l"
+            style="@style/Guideline.Vertical.Left" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_r"
+            style="@style/Guideline.Vertical.Right" />
+
+
+        <ImageView
+            android:id="@+id/icon"
+            style="@style/EmptyLayout.Icon"
+            app:layout_constraintEnd_toEndOf="@id/guideline_r"
+            app:layout_constraintStart_toStartOf="@id/guideline_l"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tv_message"
+            style="@style/EmptyLayout.Message"
+            app:layout_constraintEnd_toEndOf="@id/guideline_r"
+            app:layout_constraintStart_toStartOf="@id/guideline_l"
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            tools:text="Fluctuis sunt gloss de flavum idoleum. Sunt caesiumes locus rusticus, altus decores." />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
