@@ -2,9 +2,7 @@ package com.kryptkode.footballfixtures.app.data.db.converter
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
-import com.kryptkode.footballfixtures.app.data.models.todays.team.Team
-
-import java.util.*
+import com.kryptkode.footballfixtures.app.data.models.team.Team
 
 class TeamConverter {
     companion object {

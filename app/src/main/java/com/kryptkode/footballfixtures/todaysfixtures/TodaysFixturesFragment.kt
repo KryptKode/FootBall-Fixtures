@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.fragment.BaseFragment
-import com.kryptkode.footballfixtures.app.data.models.todays.Match
+import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider

@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Fixtures.Item.Root">
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/TodaysFixtures.Item.Root">
 
 
 
         <TextView
             android:id="@+id/tv_status"
-            style="@style/Fixtures.Item.Text.Status"
+            style="@style/TodaysFixtures.Item.Text.Status"
             app:layout_constraintBottom_toTopOf="@id/tv_time"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -17,7 +17,7 @@
 
         <TextView
             android:id="@+id/tv_time"
-            style="@style/Fixtures.Item.Text.Time"
+            style="@style/TodaysFixtures.Item.Text.Time"
             app:layout_constraintBottom_toTopOf="@id/tv_md"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_status"
@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/tv_md"
-            style="@style/Fixtures.Item.Text.Md"
+            style="@style/TodaysFixtures.Item.Text.Md"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_time"
@@ -41,7 +41,7 @@
 
         <TextView
             android:id="@+id/tv_team_home"
-            style="@style/Fixtures.Item.Text.Team"
+            style="@style/TodaysFixtures.Item.Text.Team"
             app:layout_constraintEnd_toStartOf="@id/tv_score"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@id/barrier_end"
@@ -50,7 +50,7 @@
 
         <TextView
             android:id="@+id/tv_team_away"
-            style="@style/Fixtures.Item.Text.Team"
+            style="@style/TodaysFixtures.Item.Text.Team"
             app:layout_constraintEnd_toStartOf="@id/tv_score"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@id/barrier_end"
@@ -60,14 +60,14 @@
 
         <TextView
             android:id="@+id/tv_score_home"
-            style="@style/Fixtures.Item.Text.Score"
+            style="@style/TodaysFixtures.Item.Text.Score"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="0" />
 
         <TextView
             android:id="@+id/tv_score_away"
-            style="@style/Fixtures.Item.Text.Score"
+            style="@style/TodaysFixtures.Item.Text.Score"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="0" />
@@ -80,7 +80,7 @@
 
         <TextView
             android:id="@+id/tv_score"
-            style="@style/Fixtures.Item.Text.Score.Small"
+            style="@style/TodaysFixtures.Item.Text.Score.Small"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/barrier_start"
             app:layout_constraintTop_toTopOf="parent"

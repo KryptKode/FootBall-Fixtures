@@ -15,6 +15,7 @@ class ImageLoader {
 
     @DrawableRes
     private var errorRes: Int? = null
+    private var errorDrawable: Drawable? = null
 
     fun with(view: ImageView): ImageLoader {
         this.targetView = view
@@ -41,6 +42,11 @@ class ImageLoader {
         return this
     }
 
+    fun error(drawable: Drawable?): ImageLoader {
+        this.errorDrawable = drawable
+        return this
+    }
+
     fun begin() {
         GlideApp.with(targetView ?: return)
             .load(url)
@@ -49,7 +55,11 @@ class ImageLoader {
                     targetView?.context ?: return, placeHolderRes ?: return
                 ) ?: return
             )
-            .error(errorRes ?: return)
+            .error(
+                errorDrawable ?: ContextCompat.getDrawable(
+                    targetView?.context ?: return, errorRes ?: return
+                ) ?: return
+            )
             .into(targetView ?: return)
     }
 }

@@ -17,4 +17,22 @@
     <dimen name="competition_item_padding">8dp</dimen>
     <dimen name="competition_arrow_icon_size">48dp</dimen>
     <dimen name="fixtures_padding_root">8dp</dimen>
+
+    <dimen name="table_team_logo_size">32dp</dimen>
+    <dimen name="table_item_padding_root">8dp</dimen>
+    <dimen name="table_item_margin_horiz">8dp</dimen>
+    <dimen name="table_item_padding">2dp</dimen>
+    <dimen name="table_logo_margin_horiz">12dp</dimen>
+
+    <dimen name="fixtures_item_padding_root">8dp</dimen>
+    <dimen name="fixtures_item_padding_text">4dp</dimen>
+    <dimen name="fixtures_team_logo_size">72dp</dimen>
+
+
+    <dimen name="team_item_padding_root">8dp</dimen>
+    <dimen name="team_item_padding_text">4dp</dimen>
+    <dimen name="team_logo_size">96dp</dimen>
+    <dimen name="team_card_elevation">4dp</dimen>
+    <dimen name="team_card_corner_radius">4dp</dimen>
+
 </resources>

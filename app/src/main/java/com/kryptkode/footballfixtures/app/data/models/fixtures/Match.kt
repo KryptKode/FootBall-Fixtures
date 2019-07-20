@@ -1,14 +1,13 @@
-package com.kryptkode.footballfixtures.app.data.models.todays
+package com.kryptkode.footballfixtures.app.data.models.fixtures
 
-import android.text.format.DateUtils
 import androidx.recyclerview.widget.DiffUtil
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.models.score.Score
-import com.kryptkode.footballfixtures.app.data.models.todays.referee.Referee
-import com.kryptkode.footballfixtures.app.data.models.todays.team.Team
+import com.kryptkode.footballfixtures.app.data.models.fixtures.referee.Referee
+import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.DateTimeUtils
 import java.util.*
 

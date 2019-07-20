@@ -1,7 +1,7 @@
 package com.kryptkode.footballfixtures.app.data.mock
 
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
-import com.kryptkode.footballfixtures.app.data.models.todays.Match
+import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.utils.DateTimeUtils
 import java.util.*
 

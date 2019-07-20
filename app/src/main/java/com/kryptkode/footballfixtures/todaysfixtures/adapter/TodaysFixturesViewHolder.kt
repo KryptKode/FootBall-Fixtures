@@ -2,7 +2,7 @@ package com.kryptkode.footballfixtures.todaysfixtures.adapter
 
 import com.kryptkode.footballfixtures.app.base.recycler.BaseRecyclerViewHolder
 import com.kryptkode.footballfixtures.app.data.models.score.Score
-import com.kryptkode.footballfixtures.app.data.models.todays.Match
+import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.utils.Constants.REGULAR
 import com.kryptkode.footballfixtures.databinding.ItemTodayBinding
 

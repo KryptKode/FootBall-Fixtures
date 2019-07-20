@@ -1,4 +1,4 @@
-package com.kryptkode.footballfixtures.app.data.models.todays.referee
+package com.kryptkode.footballfixtures.app.data.models.fixtures.referee
 
 import com.google.gson.annotations.SerializedName
 

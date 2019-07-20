@@ -116,6 +116,9 @@ dependencies {
     //shimmer
     implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
 
+    //imageloader
+    implementation project(":imageloader")
+
     // unit testing
     testImplementation "junit:junit:$junitVersion"
     testImplementation "android.arch.core:core-testing:$coreTesting"

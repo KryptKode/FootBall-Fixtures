@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/Table.Item.Root">
+
+        <TextView
+            android:id="@+id/tv_number"
+            style="@style/Table.Item.Text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/img_team_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1" />
+
+        <ImageView
+            android:id="@+id/img_team_logo"
+            style="@style/Table.Item.TeamLogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_number"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_soccer"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tv_team_name"
+            style="@style/Table.Item.Text.Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_games_played"
+            app:layout_constraintStart_toEndOf="@id/img_team_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/tv_games_played"
+            style="@style/Table.Item.Text"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_goals"
+            app:layout_constraintStart_toEndOf="@id/tv_team_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="36" />
+
+        <TextView
+            android:id="@+id/tv_goals"
+            style="@style/Table.Item.Text"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_points"
+            app:layout_constraintStart_toEndOf="@id/tv_games_played"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="76" />
+
+
+        <TextView
+            android:id="@+id/tv_points"
+            style="@style/Table.Item.Text"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_goals"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="93" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

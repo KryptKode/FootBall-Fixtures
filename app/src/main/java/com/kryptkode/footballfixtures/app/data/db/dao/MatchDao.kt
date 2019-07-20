@@ -5,7 +5,7 @@ import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Query
 import com.kryptkode.footballfixtures.app.data.db.dao.base.BaseDao
-import com.kryptkode.footballfixtures.app.data.models.todays.Match
+import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 
 @Dao
 abstract class MatchDao : BaseDao<Match> {
