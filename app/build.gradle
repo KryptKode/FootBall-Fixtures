@@ -44,7 +44,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    dataBinding{
+    dataBinding {
         enabled true
     }
 }
@@ -52,7 +52,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //kotlin
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     //Android Kotlin extensions
     implementation "androidx.core:core-ktx:$ktxVersion"
@@ -83,10 +83,14 @@ dependencies {
 
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    implementation"com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
     implementation "com.squareup.retrofit2:retrofit-mock:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVersion"
+
+    //gson
+    //Radio
+    implementation "com.google.code.gson:gson:$gsonVersion"
 
     //rx
     implementation "io.reactivex.rxjava2:rxandroid:$rxVersion"
@@ -109,12 +113,22 @@ dependencies {
     testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
 
 
-
     //shimmer
     implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
 
-    // testing
+    // unit testing
     testImplementation "junit:junit:$junitVersion"
+    testImplementation "android.arch.core:core-testing:$coreTesting"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+
+    //instrumentation testing
+    androidTestImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     androidTestImplementation "androidx.test:runner:$runnerVersion"
+    androidTestImplementation "android.arch.core:core-testing:$coreTesting"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test:runner:$testRunner"
+    androidTestImplementation "androidx.test:rules:$testRunner"
+    androidTestImplementation "androidx.test.ext:junit:$androidJunit"
+    androidTestImplementation 'android.arch.persistence.room:testing:1.1.1'
 }

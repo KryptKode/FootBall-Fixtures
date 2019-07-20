@@ -16,4 +16,5 @@ object Constants {
     const val WRITE_TIME_OUT = 60L
     const val DATABASE_NAME = "football.io"
     const val REGULAR = "REGULAR"
+    const val COMPETITION_DETAIL = "COMPETITION_DETAIL"
 }

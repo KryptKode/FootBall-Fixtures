@@ -1,19 +1,26 @@
 package com.kryptkode.footballfixtures.competitions
 
 import android.app.Application
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.kryptkode.footballfixtures.app.base.viewmodel.BaseViewModel
+import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.repo.AppRepository
+import com.kryptkode.footballfixtures.app.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class CompetitionViewModel @Inject constructor(
     private val repository: AppRepository,
-    application: Application) :
+    application: Application
+) :
     BaseViewModel(application) {
 
     private val blank = MutableLiveData<Unit>()
     private var loaded = false
+
+    private val _openDetail = SingleLiveEvent<Competition>()
+    val openDetail: LiveData<Competition> = _openDetail
 
     private val repoResult = Transformations.map(blank) {
         repository.getCompetitions()
@@ -27,7 +34,7 @@ class CompetitionViewModel @Inject constructor(
         it.data
     }
 
-    val listEmpty = Transformations.map(repoList){
+    val listEmpty = Transformations.map(repoList) {
         it.isEmpty()
     }
 
@@ -36,7 +43,7 @@ class CompetitionViewModel @Inject constructor(
         repos?.refresh?.invoke()
     }
 
-    fun loadData(){
+    fun loadData() {
         loadIfNotLoaded()
     }
 
@@ -45,5 +52,9 @@ class CompetitionViewModel @Inject constructor(
             blank.value = null
             loaded = true
         }
+    }
+
+    fun handleItemClick(competition: Competition?) {
+        _openDetail.value = competition
     }
 }

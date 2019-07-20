@@ -10,11 +10,13 @@ import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.fragment.BaseFragment
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
+import com.kryptkode.footballfixtures.app.utils.Constants
 import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider
 import com.kryptkode.footballfixtures.competitions.adapter.CompetitionsAdapter
 import com.kryptkode.footballfixtures.competitions.adapter.CompetitionsListener
+import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailActivity
 import com.kryptkode.footballfixtures.databinding.FragmentCompetitionBinding
 import javax.inject.Inject
 
@@ -23,7 +25,7 @@ class CompetitionsFragment @Inject constructor() :
 
     private val competitionsListener = object : CompetitionsListener {
         override fun onItemClick(competition: Competition?) {
-
+            viewModel.handleItemClick(competition)
         }
     }
 
@@ -65,6 +67,12 @@ class CompetitionsFragment @Inject constructor() :
             if (it == true) {
                 binding.emptyLayout.tvMessage.text = getString(R.string.no_competitions_msg)
             }
+        })
+
+        viewModel.openDetail.observe(this, Observer {
+            val data = Bundle()
+            data.putParcelable(Constants.EXTRAS, it)
+            startNewActivity(CompetitionsDetailActivity::class.java, data = data)
         })
     }
 

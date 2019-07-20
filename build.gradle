@@ -70,4 +70,10 @@ ext {
     shimmerVersion = "0.3.0"
     ktxVersion = "1.0.2"
     coroutineVersion = "1.1.1"
+
+    testRunner = '1.1.1'
+    coreTesting = '1.1.1'
+    mockkVersion = "1.9"
+    androidJunit = "1.1.0"
+    gsonVersion = "2.8.5"
 }

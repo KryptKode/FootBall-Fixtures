@@ -4,7 +4,7 @@
     <item
             android:id="@+id/navigation_fixtures"
             android:icon="@drawable/ic_soccer"
-            android:title="@string/title_fixtures"/>
+            android:title="@string/title_todays_fixtures"/>
 
     <item
             android:id="@+id/navigation_competitions"

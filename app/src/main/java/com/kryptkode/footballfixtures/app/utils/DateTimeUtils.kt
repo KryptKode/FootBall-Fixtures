@@ -7,9 +7,9 @@ import java.util.*
 
 object DateTimeUtils {
 
-    fun formatDate( date: String): String{
-        return SimpleDateFormat("EEE, MMM d, yyyy", Locale.getDefault())
-                .format(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(date))
+    fun formatDate(date: Date): String {
+        return SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+            .format(date)
     }
 
     fun toTimeStamp(date: String): Date? {
@@ -18,20 +18,27 @@ object DateTimeUtils {
 
     fun toDate(date: String?): Date? {
         try {
-            return SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(date ?: "")
-        }catch (e: Throwable){
+            return SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(
+                date ?: ""
+            )
+        } catch (e: Throwable) {
             Timber.e(e)
             return null
         }
     }
 
     fun toTimeStampRelative(date: String): CharSequence? {
-        return DateUtils.getRelativeTimeSpanString(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(date).time)
+        return DateUtils.getRelativeTimeSpanString(
+            SimpleDateFormat(
+                "yyyy-MM-dd'T'HH:mm:ss'Z'",
+                Locale.getDefault()
+            ).parse(date).time
+        )
     }
 
 
-    fun formatTime(time: String):String{
+    fun formatTime(time: String): String {
         return SimpleDateFormat("h:mm a", Locale.getDefault())
-                .format(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(time))
+            .format(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(time))
     }
 }
