@@ -13,6 +13,9 @@ abstract class MatchDao : BaseDao<Match> {
     @Query("SELECT * FROM `match` ORDER BY date DESC")
     abstract fun getMatches(): DataSource.Factory<Int, Match>
 
+    @Query("SELECT * FROM `match` WHERE competitionId=:competitionId  ORDER BY date DESC")
+    abstract fun getMatchesForCompetition(competitionId:Int?): DataSource.Factory<Int, Match>
+
     @Query("SELECT * FROM `match` ORDER BY date DESC")
     @VisibleForTesting
     abstract fun getMatchesList(): List<Match>

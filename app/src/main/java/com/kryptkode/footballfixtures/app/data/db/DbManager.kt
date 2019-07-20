@@ -43,6 +43,10 @@ class DbManager @Inject constructor(
         return matchDao.getMatches()
     }
 
+    fun getMatchesForCompetition(competitionId: Int?): DataSource.Factory<Int, Match> {
+        return matchDao.getMatchesForCompetition(competitionId)
+    }
+
     fun deleteAllMatches(): Observable<Unit>? {
         return Observable.fromCallable { matchDao.deleteAll() }
             .subscribeOn(schedulers.io)

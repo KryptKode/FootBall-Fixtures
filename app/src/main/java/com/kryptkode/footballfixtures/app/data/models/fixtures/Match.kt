@@ -15,6 +15,7 @@ import java.util.*
 data class Match(
     @SerializedName("id") @PrimaryKey(autoGenerate = false) val id: Int,
     @SerializedName("competition") val competition: Competition?,
+    @SerializedName("competitionId") var competitionId: Int?,
     @SerializedName("utcDate") val utcDate: String?,
     @SerializedName("status") val status: String?,
     @SerializedName("stage") val stage: String?,

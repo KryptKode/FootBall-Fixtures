@@ -40,13 +40,15 @@ class TableBoundaryCallback
             apiManager.getTableForCompetition(competitionId)
                 .map {
                     Timber.d("Response: $it")
-                    val tableList = mutableListOf<Table>()
-                    for (standing in it.standings ?: listOf()) {
-                        for (table in standing.table ?: listOf()) {
-                            table.competitionId = competitionId
-                            Timber.d("Competition ID: ${table.competitionId}")
-                            tableList.add(table)
-                        }
+                    val standing = if (it.standings?.size ?: 0 > 0) {
+                        it.standings?.get(0)
+                    } else {
+                        Standings(mutableListOf())
+                    }
+
+                    val tableList = standing?.table ?: mutableListOf()
+                    for (i in tableList) {
+                        i.competitionId = competitionId
                     }
                     tableList
                 }
@@ -73,8 +75,8 @@ class TableBoundaryCallback
 
     private fun deleteAndReturn(
         competitionId: Int?,
-        list: MutableList<Table>
-    ): Observable<MutableList<Table>> {
+        list: List<Table>
+    ): Observable<List<Table>> {
         return dbManager.deleteAllTables(competitionId)
             .map {
                 list

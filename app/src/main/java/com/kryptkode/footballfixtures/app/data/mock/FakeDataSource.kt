@@ -14,6 +14,7 @@ object FakeDataSource {
                 Match(
                     i,
                     Competition(i, "Competition$i"),
+                    0,
                     DateTimeUtils.formatDate(Date()),
                     "Status $i",
                     "",
@@ -32,6 +33,7 @@ object FakeDataSource {
         return Match(
             1,
             Competition(1, "Competition$1"),
+            0,
             DateTimeUtils.formatDate(Date()),
             "Status $1",
             "",

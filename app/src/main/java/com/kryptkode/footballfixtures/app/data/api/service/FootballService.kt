@@ -25,6 +25,11 @@ interface FootballService {
     @Headers("X-Auth-Token: ${BuildConfig.API_TOKEN}")
     fun getTeamForCompetition(@Path("competitionId") competitionId: Int?): Observable<TeamResponse>
 
+    @GET("competitions/{competitionId}/matches")
+    @Headers("X-Auth-Token: ${BuildConfig.API_TOKEN}")
+    fun getFixturesForCompetition(@Path("competitionId") competitionId: Int?): Observable<FixturesResponse>
+
+
     @GET("teams/{teamId}")
     @Headers("X-Auth-Token: ${BuildConfig.API_TOKEN}")
     fun getSquadForTeam(@Path("teamId") teamId: Int?): Observable<TeamDetailResponse>
