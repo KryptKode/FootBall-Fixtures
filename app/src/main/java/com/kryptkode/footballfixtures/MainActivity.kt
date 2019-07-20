@@ -30,10 +30,15 @@ class MainActivity : BaseViewModelActivity<ActivityMainBinding, MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initViews()
         initNavigator()
         setUpBottomNav()
         initObservers()
         navigateToHome()
+    }
+
+    private fun initViews(){
+        setSupportActionBar(binding.toolbar)
     }
 
     private fun initNavigator() {

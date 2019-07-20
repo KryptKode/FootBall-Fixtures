@@ -35,5 +35,7 @@
     <dimen name="team_card_elevation">8dp</dimen>
     <dimen name="team_card_corner_radius">4dp</dimen>
     <dimen name="teams_item_padding">8dp</dimen>
+    <dimen name="team_detail_peekable_height">100dp</dimen>
+    <dimen name="team_detail_margin_top">8dp</dimen>
 
 </resources>

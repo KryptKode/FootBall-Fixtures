@@ -101,7 +101,7 @@ abstract class BaseFragment<D, V> : DaggerFragment() where D : ViewDataBinding, 
     }
 
 
-    protected fun showView(view: View, textView: TextView, message: String) {
+     fun showView(view: View, textView: TextView, message: String) {
         if (activity is BaseActivity) {
             Timber.d("showView: animating view upwards")
             (activity as BaseActivity).showView(view, textView, message)
@@ -110,7 +110,7 @@ abstract class BaseFragment<D, V> : DaggerFragment() where D : ViewDataBinding, 
         }
     }
 
-    protected fun hideView(view: View) {
+     fun hideView(view: View) {
         if (activity is BaseActivity) {
             Timber.d("hideView: animating view downwards")
             (activity as BaseActivity).hideView(view)

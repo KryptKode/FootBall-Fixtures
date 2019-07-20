@@ -18,11 +18,12 @@
     <string name="retry">Retry</string>
     <string name="error_layout_icon_content_description">Soccer</string>
     <string name="press_to_exit">Press again to exit</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
     <string name="no_fixtures_msg">No fixtures, please try again later</string>
     <string name="no_competitions_msg">No competitions, please try again later</string>
     <string name="title_table">Table</string>
     <string name="title_teams">Teams</string>
     <string name="title_todays_fixtures">Today\'s Fixtures</string>
     <string name="no_table_msg">No table data, please try again</string>
+    <string name="teams_logo_content_desc">Team Logo</string>
 </resources>

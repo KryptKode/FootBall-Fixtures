@@ -3,6 +3,7 @@ package com.kryptkode.footballfixtures.app.data.db
 import androidx.paging.DataSource
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
+import com.kryptkode.footballfixtures.app.data.models.squad.Squad
 import com.kryptkode.footballfixtures.app.data.models.table.Table
 import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.schedulers.AppSchedulers
@@ -17,6 +18,7 @@ class DbManager @Inject constructor(
     private val matchDao = db.matchDao()
     private val tableDao = db.tableDao()
     private val teamsDao = db.teamsDao()
+    private val squadDao = db.squadDao()
 
     fun insertCompetitions(list: List<Competition>?): Observable<Unit>? {
         return Observable.fromCallable { competitionDao.insert(list ?: listOf()) }
@@ -75,4 +77,17 @@ class DbManager @Inject constructor(
             .subscribeOn(schedulers.io)
     }
 
+    fun insertSquad(list: List<Squad>?): Observable<Unit>? {
+        return Observable.fromCallable { squadDao.insert(list ?: listOf()) }
+            .subscribeOn(schedulers.io)
+    }
+
+    fun getSquad(teamId: Int?): DataSource.Factory<Int, Squad> {
+        return squadDao.getSquadForCompetition(teamId)
+    }
+
+    fun deleteAllSquads(): Observable<Unit>? {
+        return Observable.fromCallable { squadDao.deleteAll() }
+            .subscribeOn(schedulers.io)
+    }
 }

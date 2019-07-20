@@ -49,6 +49,7 @@ class CompetitionsDetailActivity :
     }
 
     private fun initViews() {
+        setSupportActionBar(binding.toolbar)
         showUpEnabled(true)
         val competition = getFragmentArguments()?.getParcelable<Competition>(Constants.EXTRAS)
         setActionBarTitle(competition?.name ?: getString(R.string.app_name))

@@ -23,4 +23,5 @@ abstract class BaseBoundaryCallback<T> : PagedList.BoundaryCallback<T>(){
     }
 
     abstract fun requestAndSaveData()
+
 }

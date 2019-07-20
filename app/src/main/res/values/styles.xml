@@ -376,6 +376,29 @@
         <item name="android:layout_height">@dimen/team_logo_size</item>
     </style>
 
+    <style name="AppTheme.Toolbar" parent="AppTheme" />
 
-    <string name="teams_logo_content_desc">Team Logo</string>
+
+    <style name="TeamsDetail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TeamsDetail.Root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="TeamsDetail.Title">
+        <item name="android:maxLines">@integer/team_detail_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="TeamsDetail.CloseButton">
+        <item name="srcCompat">@drawable/ic_close</item>
+    </style>
+
 </resources>

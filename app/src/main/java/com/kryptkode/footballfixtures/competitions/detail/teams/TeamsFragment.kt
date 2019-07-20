@@ -19,6 +19,7 @@ import com.kryptkode.footballfixtures.app.views.StaggeredGridSpacingItemDecorati
 import com.kryptkode.footballfixtures.competitions.detail.fixtures.FixturesViewModel
 import com.kryptkode.footballfixtures.competitions.detail.teams.adapter.TeamAdapter
 import com.kryptkode.footballfixtures.competitions.detail.teams.adapter.TeamListener
+import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailFragment
 import com.kryptkode.footballfixtures.databinding.FragmentTeamsBinding
 import javax.inject.Inject
 
@@ -26,7 +27,8 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
 
     private val teamListener = object : TeamListener {
         override fun onItemClick(item: Team?) {
-            //TODO open detail
+            val fragment = TeamDetailFragment.newInstance(item)
+            fragment.show(fragmentManager ?: return, fragment.javaClass.name)
         }
     }
 

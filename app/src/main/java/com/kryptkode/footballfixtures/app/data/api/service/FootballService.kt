@@ -1,10 +1,7 @@
 package com.kryptkode.footballfixtures.app.data.api.service
 
 import com.kryptkode.footballfixtures.BuildConfig
-import com.kryptkode.footballfixtures.app.data.api.models.CompetitionResponse
-import com.kryptkode.footballfixtures.app.data.api.models.TableResponse
-import com.kryptkode.footballfixtures.app.data.api.models.TeamResponse
-import com.kryptkode.footballfixtures.app.data.api.models.TodaysFixturesResponse
+import com.kryptkode.footballfixtures.app.data.api.models.*
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -28,5 +25,8 @@ interface FootballService {
     @Headers("X-Auth-Token: ${BuildConfig.API_TOKEN}")
     fun getTeamForCompetition(@Path("competitionId") competitionId: Int?): Observable<TeamResponse>
 
+    @GET("teams/{teamId}")
+    @Headers("X-Auth-Token: ${BuildConfig.API_TOKEN}")
+    fun getSquadForTeam(@Path("teamId") teamId: Int?): Observable<TeamDetailResponse>
 }
 

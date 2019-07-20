@@ -7,6 +7,7 @@ import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailView
 import com.kryptkode.footballfixtures.competitions.detail.fixtures.FixturesViewModel
 import com.kryptkode.footballfixtures.competitions.detail.table.TableViewModel
 import com.kryptkode.footballfixtures.competitions.detail.teams.TeamsViewModel
+import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailViewModel
 import com.kryptkode.footballfixtures.todaysfixtures.TodaysFixturesViewModel
 import dagger.Binds
 import dagger.Module
@@ -51,6 +52,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(CompetitionsDetailViewModel::class)
     abstract fun bindCompetitionsDetailViewModel(viewModel: CompetitionsDetailViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(TeamDetailViewModel::class)
+    abstract fun bindTeamDetailViewModel(viewModel: TeamDetailViewModel): ViewModel
 
 
 }
