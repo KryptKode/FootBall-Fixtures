@@ -27,4 +27,6 @@
     <string name="no_table_msg">No table data, please try again</string>
     <string name="teams_logo_content_desc">Team Logo</string>
     <string name="no_team_msg">No team data, please try again</string>
+    <string name="md_text">MD: 35</string>
+    <string name="score_text">00</string>
 </resources>

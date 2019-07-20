@@ -159,7 +159,7 @@ class AppRepository @Inject constructor(
             data = data,
             refreshState = networkState,
             refresh = {
-                boundaryCallback.onZeroItemsLoaded()
+                boundaryCallback.deleteAndRefresh()
             },
             disposable = boundaryCallback.disposable
         )
@@ -219,7 +219,7 @@ class AppRepository @Inject constructor(
      * Get squad data for a particular team
      * @param team The team
      */
-    fun getSquadForTeam(team:Team?): Listing<Squad> {
+    fun getSquadForTeam(team: Team?): Listing<Squad> {
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getSquad(team?.id)
 

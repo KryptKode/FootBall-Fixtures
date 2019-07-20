@@ -9,7 +9,8 @@ import com.kryptkode.footballfixtures.app.data.models.team.Team
 @Entity
 data class Table(
     @SerializedName("competitionId") var competitionId: Int?,
-    @SerializedName("position") @PrimaryKey(autoGenerate = false) val position: Int?,
+    @SerializedName("id") @PrimaryKey(autoGenerate = true) val id: Int,
+    @SerializedName("position") val position: Int?,
     @SerializedName("team") val team: Team,
     @SerializedName("playedGames") val playedGames: Int?,
     @SerializedName("won") val won: Int?,

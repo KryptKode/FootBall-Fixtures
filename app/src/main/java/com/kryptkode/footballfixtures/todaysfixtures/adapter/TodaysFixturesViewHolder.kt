@@ -1,9 +1,11 @@
 package com.kryptkode.footballfixtures.todaysfixtures.adapter
 
+import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.recycler.BaseRecyclerViewHolder
 import com.kryptkode.footballfixtures.app.data.models.score.Score
 import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.utils.Constants.REGULAR
+import com.kryptkode.footballfixtures.app.utils.DateTimeUtils
 import com.kryptkode.footballfixtures.databinding.ItemTodayBinding
 
 class TodaysFixturesViewHolder(
@@ -16,8 +18,13 @@ class TodaysFixturesViewHolder(
         binding.tvTeamHome.text = item?.homeTeam?.name
         binding.tvTeamAway.text = item?.awayTeam?.name
         binding.tvStatus.text = item?.status
+        binding.tvTime.text = DateTimeUtils.formatTime(item?.utcDate)
+        binding.tvMd.text = binding.root.context.getString(R.string.md_text)
+        binding.tvScore.text = binding.root.context.getString(R.string.score_text)
         binding.tvScoreAway.text = resolveAwayScore(item?.score)
         binding.tvScoreHome.text = resolveHomeScore(item?.score)
+
+
 
         binding.root.setOnClickListener {
             listener?.onItemClick(item)

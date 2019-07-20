@@ -57,8 +57,8 @@ class DbManager @Inject constructor(
         return tableDao.getTableForCompetition(competitionId)
     }
 
-    fun deleteAllTables(): Observable<Unit>? {
-        return Observable.fromCallable { tableDao.deleteAll() }
+    fun deleteAllTables(competitionId: Int?): Observable<Unit> {
+        return Observable.fromCallable { tableDao.deleteAll(competitionId) }
             .subscribeOn(schedulers.io)
     }
 

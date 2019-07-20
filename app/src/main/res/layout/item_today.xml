@@ -6,7 +6,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout style="@style/TodaysFixtures.Item.Root">
 
 
-
         <TextView
             android:id="@+id/tv_status"
             style="@style/TodaysFixtures.Item.Text.Status"
@@ -51,6 +50,7 @@
         <TextView
             android:id="@+id/tv_team_away"
             style="@style/TodaysFixtures.Item.Text.Team"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/tv_score"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@id/barrier_end"
@@ -68,7 +68,7 @@
         <TextView
             android:id="@+id/tv_score_away"
             style="@style/TodaysFixtures.Item.Text.Score"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_team_away"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="0" />
 
@@ -81,7 +81,7 @@
         <TextView
             android:id="@+id/tv_score"
             style="@style/TodaysFixtures.Item.Text.Score.Small"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_team_away"
             app:layout_constraintEnd_toStartOf="@id/barrier_start"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="0" />

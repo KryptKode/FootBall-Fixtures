@@ -91,7 +91,6 @@
     </style>
 
     <style name="TodaysFixtures.Item.Text">
-        <item name="android:padding">@dimen/today_item_text_padding</item>
         <item name="android:layout_marginStart">@dimen/today_item_margin_horiz</item>
         <item name="android:layout_marginEnd">@dimen/today_item_margin_horiz</item>
         <item name="android:layout_marginLeft">@dimen/today_item_margin_horiz</item>
@@ -105,18 +104,18 @@
 
     <style name="TodaysFixtures.Item.Text.Status">
         <item name="android:textAllCaps">true</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
     </style>
 
     <style name="TodaysFixtures.Item.Text.Team">
         <item name="android:layout_width">0dp</item>
         <item name="android:maxLines">@integer/matches_list_text_max_lines</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
     </style>
 
     <style name="TodaysFixtures.Item.Text.Time">
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
     </style>
 
     <style name="TodaysFixtures.Item.Text.Md">
@@ -129,7 +128,7 @@
     </style>
 
     <style name="TodaysFixtures.Item.Text.Score.Small">
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
     </style>
 
 
@@ -162,7 +161,7 @@
         <item name="android:maxLines">@integer/competition_list_text_max_lines</item>
         <item name="android:ellipsize">end</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
     </style>
 
 

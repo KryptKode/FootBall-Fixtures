@@ -61,6 +61,7 @@
                     <ImageView
                         android:id="@+id/img_team_logo"
                         style="@style/Teams.Item.Logo"
+                        android:layout_marginTop="@dimen/team_detail_margin_top"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"

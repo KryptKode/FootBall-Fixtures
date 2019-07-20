@@ -37,8 +37,13 @@ object DateTimeUtils {
     }
 
 
-    fun formatTime(time: String): String {
-        return SimpleDateFormat("h:mm a", Locale.getDefault())
-            .format(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(time))
+    fun formatTime(time: String?): String? {
+        try {
+            return SimpleDateFormat("HH:mm", Locale.getDefault())
+                .format(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault()).parse(time))
+        }catch (e: Throwable) {
+            Timber.e(e)
+            return null
+        }
     }
 }
