@@ -26,4 +26,5 @@
     <string name="title_todays_fixtures">Today\'s Fixtures</string>
     <string name="no_table_msg">No table data, please try again</string>
     <string name="teams_logo_content_desc">Team Logo</string>
+    <string name="no_team_msg">No team data, please try again</string>
 </resources>

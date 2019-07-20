@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.kryptkode.footballfixtures.app.base.viewmodel.BaseViewModel
+import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.data.repo.AppRepository
 import com.kryptkode.footballfixtures.app.utils.SingleLiveEvent
@@ -29,7 +30,7 @@ class TeamDetailViewModel @Inject constructor(
         it.refreshState
     }
 
-     val repoList = Transformations.switchMap(repoResult) {
+    val repoList = Transformations.switchMap(repoResult) {
         it.data
     }
 
@@ -43,7 +44,7 @@ class TeamDetailViewModel @Inject constructor(
         repos?.refresh?.invoke()
     }
 
-    fun loadData(team:Team?) {
+    fun loadData(team: Team?) {
         Timber.d("Competition loading... ${team}")
         loadIfNotLoaded(team)
     }

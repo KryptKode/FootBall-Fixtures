@@ -118,6 +118,9 @@ dependencies {
 
     //imageloader
     implementation project(":imageloader")
+
+    implementation 'com.r0adkll:slidableactivity:2.0.6'
+
     // unit testing
     testImplementation "junit:junit:$junitVersion"
     testImplementation "android.arch.core:core-testing:$coreTesting"

@@ -17,6 +17,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <style name="AppTheme.NoActionBar.Transparent" >
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />

@@ -26,15 +26,13 @@ class TableBoundaryCallback
         networkState.postValue(NetworkState.LOADING)
         disposable.add(apiManager.getTableForCompetition(competitionId)
             .map {
-                val standing = if (it.standings?.size ?: 0 > 0) {
-                    it.standings?.get(0)
-                } else {
-                    Standings(mutableListOf())
-                }
 
-                val tableList = standing?.table ?: mutableListOf()
-                for (i in tableList) {
-                    i.competitionId = competitionId
+                val tableList = mutableListOf<Table>()
+                for (standing in it.standings ?: listOf()) {
+                    for (table in standing.table ?: listOf()) {
+                        table.competitionId = competitionId
+                        tableList.add(table)
+                    }
                 }
                 tableList
             }

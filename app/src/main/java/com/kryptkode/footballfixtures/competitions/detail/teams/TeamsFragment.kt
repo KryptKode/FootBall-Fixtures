@@ -16,9 +16,11 @@ import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider
 import com.kryptkode.footballfixtures.app.views.StaggeredGridSpacingItemDecoration
+import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailActivity
 import com.kryptkode.footballfixtures.competitions.detail.fixtures.FixturesViewModel
 import com.kryptkode.footballfixtures.competitions.detail.teams.adapter.TeamAdapter
 import com.kryptkode.footballfixtures.competitions.detail.teams.adapter.TeamListener
+import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailActivity
 import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailFragment
 import com.kryptkode.footballfixtures.databinding.FragmentTeamsBinding
 import javax.inject.Inject
@@ -27,8 +29,7 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
 
     private val teamListener = object : TeamListener {
         override fun onItemClick(item: Team?) {
-            val fragment = TeamDetailFragment.newInstance(item)
-            fragment.show(fragmentManager ?: return, fragment.javaClass.name)
+            viewModel.handleItemClick(item)
         }
     }
 
@@ -47,7 +48,7 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
             binding.emptyLayout.tvMessage.text = if (it == NetworkState.LOADING) {
                 getString(R.string.loading)
             } else {
-                getString(R.string.no_table_msg)
+                getString(R.string.no_team_msg)
             }
 
 
@@ -68,8 +69,17 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
 
         viewModel.listEmpty.observe(this, Observer {
             if (it == true) {
-                binding.emptyLayout.tvMessage.text = getString(R.string.no_table_msg)
+                binding.emptyLayout.tvMessage.text = getString(R.string.no_team_msg)
             }
+        })
+
+        viewModel.openDetail.observe(this, Observer {
+            val data = Bundle()
+            data.putParcelable(Constants.EXTRAS, it)
+            startNewActivity(TeamDetailActivity::class.java, data = data)
+
+            activity?.overridePendingTransition(R.anim.slide_up_bottom,
+                R.anim.slide_down_top)
         })
     }
 

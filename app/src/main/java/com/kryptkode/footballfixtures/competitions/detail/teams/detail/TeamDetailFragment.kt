@@ -1,28 +1,14 @@
 package com.kryptkode.footballfixtures.competitions.detail.teams.detail
 
-import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.fragment.BaseFragment
-import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.AttrUtils
 import com.kryptkode.footballfixtures.app.utils.Constants
@@ -30,58 +16,17 @@ import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider
 import com.kryptkode.footballfixtures.app.views.PlaceHolderDrawable
-import com.kryptkode.footballfixtures.app.views.StaggeredGridSpacingItemDecoration
-import com.kryptkode.footballfixtures.competitions.detail.teams.TeamsFragment
+import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailActivity
 import com.kryptkode.footballfixtures.competitions.detail.teams.detail.adapter.TeamDetailAdapter
 import com.kryptkode.footballfixtures.databinding.FragmentTeamDetailBinding
 import com.kryptkode.imageloader.ImageLoader
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
-import dagger.android.HasFragmentInjector
-import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-class TeamDetailFragment @Inject constructor() : BottomSheetDialogFragment(), HasAndroidInjector {
-
-    protected lateinit var binding: FragmentTeamDetailBinding
-    protected lateinit var viewModel: TeamDetailViewModel
-
-
-    @Inject
-    protected lateinit var viewModeFactory: ViewModelProvider.Factory
-
-
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+class TeamDetailFragment @Inject constructor() :
+    BaseFragment<FragmentTeamDetailBinding, TeamDetailViewModel>(), HasAndroidInjector {
 
     private val adapter = TeamDetailAdapter()
-
-    override fun onAttach(context: Context) {
-        AndroidSupportInjection.inject(this)
-        super.onAttach(context)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this, viewModeFactory)
-            .get(TeamDetailViewModel::class.java)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return initBinding(inflater, container)
-    }
-
-    private fun initBinding(inflater: LayoutInflater, container: ViewGroup?): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_team_detail, container, false)
-        binding.setVariable(BR._all, viewModel)
-        binding.executePendingBindings()
-        return binding.root
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -97,7 +42,7 @@ class TeamDetailFragment @Inject constructor() : BottomSheetDialogFragment(), Ha
             binding.emptyLayout.tvMessage.text = if (it == NetworkState.LOADING) {
                 getString(R.string.loading)
             } else {
-                getString(R.string.no_table_msg)
+                getString(R.string.no_team_msg)
             }
 
 
@@ -118,12 +63,12 @@ class TeamDetailFragment @Inject constructor() : BottomSheetDialogFragment(), Ha
 
         viewModel.listEmpty.observe(this, Observer {
             if (it == true) {
-                binding.emptyLayout.tvMessage.text = getString(R.string.no_table_msg)
+                binding.emptyLayout.tvMessage.text = getString(R.string.no_team_msg)
             }
         })
 
         viewModel.close.observe(this, Observer {
-            dismiss()
+            activity?.finish()
         })
     }
 
@@ -138,6 +83,9 @@ class TeamDetailFragment @Inject constructor() : BottomSheetDialogFragment(), Ha
                 AttrUtils.convertAttrToColor(R.attr.colorError, binding.root.context)
             )
         }
+
+        (activity as TeamDetailActivity?)?.setSupportActionBar(binding.toolbar)
+
         binding.toolbar.setNavigationIcon(R.drawable.ic_close)
         binding.toolbar.setNavigationOnClickListener {
             viewModel.handleNavigationIconClick()
@@ -178,36 +126,11 @@ class TeamDetailFragment @Inject constructor() : BottomSheetDialogFragment(), Ha
 
     private fun getTeam() = arguments?.getParcelable<Team>(Constants.EXTRAS)
 
-    override fun onStart() {
-        super.onStart()
-        val dialog = dialog as BottomSheetDialog?
-        val bottomSheet =
-            dialog?.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout?
+    override fun getLayoutResourceId() = R.layout.fragment_team_detail
 
-        val behavior = BottomSheetBehavior.from(bottomSheet)
-        behavior.setBottomSheetCallback(object : BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+    override fun getBindingVariable() = BR._all
 
-            }
-
-            override fun onStateChanged(bottomSheet: View, newState: Int) {
-
-            }
-        })
-
-        behavior.state = BottomSheetBehavior.STATE_EXPANDED
-
-    }
-
-    override fun androidInjector(): AndroidInjector<Any>? {
-        return androidInjector
-    }
-
-    private fun showView(view: View, textView: TextView, message: String) =
-        (parentFragment as TeamsFragment?)?.showView(view, textView, message)
-
-    private fun hideView(view: View) =
-        (parentFragment as TeamsFragment?)?.hideView(view)
+    override fun getViewModelClass() = TeamDetailViewModel::class.java
 
     companion object {
         fun newInstance(team: Team?): TeamDetailFragment {
