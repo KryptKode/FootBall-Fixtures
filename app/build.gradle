@@ -118,7 +118,6 @@ dependencies {
 
     //imageloader
     implementation project(":imageloader")
-
     // unit testing
     testImplementation "junit:junit:$junitVersion"
     testImplementation "android.arch.core:core-testing:$coreTesting"

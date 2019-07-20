@@ -1,9 +1,11 @@
 package com.kryptkode.imageloader
 
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.PictureDrawable
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
+import com.kryptkode.imageloader.svg.SvgSoftwareLayerSetter
 
 class ImageLoader {
     private var targetView: ImageView? = null
@@ -49,7 +51,9 @@ class ImageLoader {
 
     fun begin() {
         GlideApp.with(targetView ?: return)
+            .`as`(PictureDrawable::class.java)
             .load(url)
+            .listener(SvgSoftwareLayerSetter())
             .placeholder(
                 placeHolderDrawable ?: ContextCompat.getDrawable(
                     targetView?.context ?: return, placeHolderRes ?: return

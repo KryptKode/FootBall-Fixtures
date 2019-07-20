@@ -76,4 +76,5 @@ ext {
     mockkVersion = "1.9"
     androidJunit = "1.1.0"
     gsonVersion = "2.8.5"
+    androidSvgVersion = "1.2.1"
 }
