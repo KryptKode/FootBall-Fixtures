@@ -11,7 +11,9 @@ import com.kryptkode.footballfixtures.app.data.callbacks.CompetitionBoundaryCall
 import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.data.callbacks.MatchesBoundaryCallback
 import com.kryptkode.footballfixtures.app.data.callbacks.TableBoundaryCallback
+import com.kryptkode.footballfixtures.app.data.callbacks.TeamBoundaryCallback
 import com.kryptkode.footballfixtures.app.data.models.table.Table
+import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.schedulers.AppSchedulers
 import timber.log.Timber
 import javax.inject.Inject
@@ -119,7 +121,8 @@ class AppRepository @Inject constructor(
 
 
     /**
-     * Get today's fixtures
+     * Get table for a particular competition
+     * @param competitionId The ID of the competition
      */
     fun getTableForCompetition(competitionId: Int?): Listing<Table> {
         // Get data source factory from the local cache
@@ -138,6 +141,55 @@ class AppRepository @Inject constructor(
         // the list and update the database with extra data
         val boundaryCallback =
             TableBoundaryCallback(
+                schedulers,
+                apiManager,
+                dbManager,
+                context,
+                competitionId
+            )
+        val networkState = boundaryCallback.networkState
+
+
+        // Get the paged list
+        val builder = LivePagedListBuilder(dataSourceFactory, pagedListConfig)
+            .setBoundaryCallback(boundaryCallback)
+
+        val data = builder.build()
+
+
+        // Get the network errors exposed by the boundary callback
+        return Listing(
+            data = data,
+            refreshState = networkState,
+            refresh = {
+                boundaryCallback.onZeroItemsLoaded()
+            },
+            disposable = boundaryCallback.disposable
+        )
+    }
+
+
+    /**
+     * Get team data for a particular competition
+     * @param competitionId The ID of the competition
+     */
+    fun getTeamsForCompetition(competitionId: Int?): Listing<Team> {
+        // Get data source factory from the local cache
+        val dataSourceFactory = dbManager.getTeams(competitionId)
+
+
+        val pagedListConfig = PagedList.Config.Builder()
+            .setEnablePlaceholders(true)
+            .setInitialLoadSizeHint(DATABASE_INITIAL_PAGE_SIZE)
+            .setPageSize(DATABASE_PAGE_SIZE)
+            .build()
+
+
+        // every new query creates a new BoundaryCallback
+        // The BoundaryCallback will observe when the user reaches to the edges of
+        // the list and update the database with extra data
+        val boundaryCallback =
+            TeamBoundaryCallback(
                 schedulers,
                 apiManager,
                 dbManager,

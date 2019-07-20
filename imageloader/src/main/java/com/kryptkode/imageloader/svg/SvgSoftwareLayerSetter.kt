@@ -15,7 +15,7 @@ import com.bumptech.glide.request.target.Target
 class SvgSoftwareLayerSetter : RequestListener<PictureDrawable> {
 
     override fun onLoadFailed(
-        e: GlideException?, model: Any, target: Target<PictureDrawable>, isFirstResource: Boolean
+        e: GlideException?, model: Any?, target: Target<PictureDrawable>, isFirstResource: Boolean
     ): Boolean {
         val view = (target as ImageViewTarget<*>).view
         view.setLayerType(ImageView.LAYER_TYPE_NONE, null)
@@ -24,7 +24,7 @@ class SvgSoftwareLayerSetter : RequestListener<PictureDrawable> {
 
     override fun onResourceReady(
         resource: PictureDrawable,
-        model: Any,
+        model: Any?,
         target: Target<PictureDrawable>,
         dataSource: DataSource,
         isFirstResource: Boolean

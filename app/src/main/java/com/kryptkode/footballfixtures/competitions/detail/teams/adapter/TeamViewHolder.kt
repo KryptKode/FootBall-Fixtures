@@ -1,17 +1,21 @@
-package com.kryptkode.footballfixtures.competitions.detail.table.adapter
+package com.kryptkode.footballfixtures.competitions.detail.teams.adapter
 
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.recycler.BaseRecyclerViewHolder
-import com.kryptkode.footballfixtures.app.data.models.table.Table
+import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.AttrUtils
 import com.kryptkode.footballfixtures.app.views.PlaceHolderDrawable
-import com.kryptkode.footballfixtures.databinding.ItemTableBinding
+import com.kryptkode.footballfixtures.databinding.ItemTeamsBinding
 import com.kryptkode.imageloader.ImageLoader
+import timber.log.Timber
 
-class TableViewHolder(binding: ItemTableBinding) :
-    BaseRecyclerViewHolder<Table, ItemTableBinding>(binding) {
+class TeamViewHolder(
+    binding: ItemTeamsBinding,
+    private val listener: TeamListener? = null
+) :
+    BaseRecyclerViewHolder<Team, ItemTeamsBinding>(binding) {
 
     private val placeholder = PlaceHolderDrawable(binding.root.context)
     private val errorDrawable = ContextCompat.getDrawable(
@@ -24,18 +28,18 @@ class TableViewHolder(binding: ItemTableBinding) :
         )
     }
 
-    override fun performBind(item: Table?) {
-        binding.tvNumber.text = item?.position.toString()
-        binding.tvTeamName.text = item?.team?.name
-        binding.tvGoals.text = item?.goalDifference.toString()
-        binding.tvGamesPlayed.text = item?.playedGames.toString()
-        binding.tvPoints.text = item?.points.toString()
-
+    override fun performBind(item: Team?) {
+        binding.tvTeamName.text = item?.name
+        Timber.d("URL: ${item?.crestUrl}")
         ImageLoader()
             .with(binding.imgTeamLogo)
             .placeholder(placeholder)
-            .load(item?.team?.crestUrl)
+            .load(item?.crestUrl)
             .error(errorDrawable)
             .begin()
+
+        binding.root.setOnClickListener {
+            listener?.onItemClick(item)
+        }
     }
 }

@@ -21,7 +21,7 @@
 
             <TextView
                 android:id="@+id/tv_team_name"
-                style="@style/Table.Item.Text.Name"
+                style="@style/Teams.Item.Text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

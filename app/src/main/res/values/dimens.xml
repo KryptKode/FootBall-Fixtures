@@ -32,7 +32,8 @@
     <dimen name="team_item_padding_root">8dp</dimen>
     <dimen name="team_item_padding_text">4dp</dimen>
     <dimen name="team_logo_size">96dp</dimen>
-    <dimen name="team_card_elevation">4dp</dimen>
+    <dimen name="team_card_elevation">8dp</dimen>
     <dimen name="team_card_corner_radius">4dp</dimen>
+    <dimen name="teams_item_padding">8dp</dimen>
 
 </resources>

@@ -4,6 +4,7 @@ import androidx.paging.DataSource
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.data.models.table.Table
+import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.schedulers.AppSchedulers
 import io.reactivex.Observable
 import javax.inject.Inject
@@ -15,6 +16,7 @@ class DbManager @Inject constructor(
     private val competitionDao = db.competitionDao()
     private val matchDao = db.matchDao()
     private val tableDao = db.tableDao()
+    private val teamsDao = db.teamsDao()
 
     fun insertCompetitions(list: List<Competition>?): Observable<Unit>? {
         return Observable.fromCallable { competitionDao.insert(list ?: listOf()) }
@@ -55,6 +57,21 @@ class DbManager @Inject constructor(
 
     fun deleteAllTables(): Observable<Unit>? {
         return Observable.fromCallable { tableDao.deleteAll() }
+            .subscribeOn(schedulers.io)
+    }
+
+
+    fun insertTeams(list: List<Team>?): Observable<Unit>? {
+        return Observable.fromCallable { teamsDao.insert(list ?: listOf()) }
+            .subscribeOn(schedulers.io)
+    }
+
+    fun getTeams(competitionId: Int?): DataSource.Factory<Int, Team> {
+        return teamsDao.getTeamsForCompetition(competitionId)
+    }
+
+    fun deleteAllTeams(): Observable<Unit>? {
+        return Observable.fromCallable { teamsDao.deleteAll() }
             .subscribeOn(schedulers.io)
     }
 

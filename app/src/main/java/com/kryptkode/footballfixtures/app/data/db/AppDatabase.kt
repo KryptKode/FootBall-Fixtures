@@ -8,14 +8,19 @@ import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.db.dao.CompetitionDao
 import com.kryptkode.footballfixtures.app.data.db.dao.MatchDao
 import com.kryptkode.footballfixtures.app.data.db.dao.TableDao
+import com.kryptkode.footballfixtures.app.data.db.dao.TeamsDao
 import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.data.models.table.Table
+import com.kryptkode.footballfixtures.app.data.models.team.Team
 
 /**
  * Database schema that holds the list of repos.
  */
 @Database(
-    entities = [Competition::class, Match::class, Table::class],
+    entities = [Competition::class,
+        Match::class,
+        Table::class,
+        Team::class],
     version = 1,
     exportSchema = true
 )
@@ -33,4 +38,6 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun matchDao(): MatchDao
 
     abstract fun tableDao(): TableDao
+
+    abstract fun teamsDao(): TeamsDao
 }

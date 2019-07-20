@@ -13,4 +13,7 @@ class ApiManager @Inject constructor(retrofit: Retrofit) {
 
     fun getTableForCompetition(competitionId: Int?) =
         footballService.getTableForCompetition(competitionId)
+
+    fun getTeamForCompetition(competitionId: Int?) =
+        footballService.getTeamForCompetition(competitionId)
 }
