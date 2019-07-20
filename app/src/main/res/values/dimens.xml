@@ -18,7 +18,7 @@
     <dimen name="competition_arrow_icon_size">48dp</dimen>
     <dimen name="fixtures_padding_root">8dp</dimen>
 
-    <dimen name="table_team_logo_size">32dp</dimen>
+    <dimen name="table_team_logo_size">24dp</dimen>
     <dimen name="table_item_padding_root">8dp</dimen>
     <dimen name="table_item_margin_horiz">8dp</dimen>
     <dimen name="table_item_padding">2dp</dimen>

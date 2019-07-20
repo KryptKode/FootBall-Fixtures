@@ -2,6 +2,8 @@ package com.kryptkode.footballfixtures.competitions.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.kryptkode.footballfixtures.BR
@@ -24,14 +26,17 @@ class CompetitionsDetailActivity :
     lateinit var fragmentTitleProvider: FragmentTitleProvider
 
 
-    private val adapter = object : FragmentStateAdapter(this) {
-        override fun getItemCount() = fragmentListProvider.list.size
+    private val adapter = object :
+        FragmentPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+        override fun getCount() = fragmentListProvider.list.size
 
-        override fun createFragment(position: Int): Fragment {
+        override fun getItem(position: Int): Fragment {
             val fragment = fragmentListProvider.list[position]
             fragment.arguments = getFragmentArguments()
             return fragment
         }
+
+        override fun getPageTitle(position: Int) = fragmentTitleProvider.list[position]
     }
 
     private fun getFragmentArguments(): Bundle? {
@@ -48,10 +53,8 @@ class CompetitionsDetailActivity :
         val competition = getFragmentArguments()?.getParcelable<Competition>(Constants.EXTRAS)
         setActionBarTitle(competition?.name ?: getString(R.string.app_name))
         binding.viewPager.adapter = adapter
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
 
-        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            tab.text = fragmentTitleProvider.list[position]
-        }.attach()
     }
 
 

@@ -20,8 +20,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_number"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_soccer"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_soccer" />
 
 
         <TextView
@@ -29,6 +29,7 @@
             style="@style/Table.Item.Text.Name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/tv_games_played"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@id/img_team_logo"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/full_names" />

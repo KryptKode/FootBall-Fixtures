@@ -16,12 +16,14 @@
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:tabIndicatorColor="?attr/colorSecondaryVariant"
                 app:tabIndicatorHeight="2dp"
-                app:tabMode="fixed" />
+                app:tabMode="fixed"
+                app:tabTextColor="@drawable/tab_layout_text" />
         </com.google.android.material.appbar.AppBarLayout>
 
 
-        <androidx.viewpager2.widget.ViewPager2
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
