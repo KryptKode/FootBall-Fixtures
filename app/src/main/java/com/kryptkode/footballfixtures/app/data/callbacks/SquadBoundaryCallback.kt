@@ -45,15 +45,4 @@ class SquadBoundaryCallback(
             })
         )
     }
-
-    fun deleteThenRequestAndSaveData() {
-        disposable.add(dbManager.deleteAllSquads()?.subscribe({
-            requestAndSaveData()
-        }, {
-            Timber.e(it)
-            val error = ErrorHandler(context).getErrorMessage(it)
-            networkState.postValue(NetworkState.error(error))
-        }) ?: return)
-    }
-
 }

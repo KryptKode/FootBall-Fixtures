@@ -10,11 +10,11 @@ import com.kryptkode.footballfixtures.app.data.models.squad.Squad
 @Dao
 abstract class  SquadDao : BaseDao<Squad>{
     @Query("SELECT * FROM `squad` WHERE teamId=:teamId")
-    abstract fun getSquadForCompetition(teamId: Int?): DataSource.Factory<Int, Squad>
+    abstract fun getSquadForTeam(teamId: Int?): DataSource.Factory<Int, Squad>
 
     @Query("SELECT * FROM `squad` WHERE teamId=:teamId")
     @VisibleForTesting
-    abstract fun getSquadListForCompetition(teamId: Int?): List<Squad>
+    abstract fun getSquadListForTeam(teamId: Int?): List<Squad>
 
     @Query("DELETE FROM `squad`")
     abstract fun deleteAll()

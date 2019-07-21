@@ -16,6 +16,6 @@ abstract class TableDao : BaseDao<Table> {
     @VisibleForTesting
     abstract fun getTableListForCompetition(competitionId: Int?): List<Table>
 
-    @Query("DELETE FROM `table` WHERE competitionId=:competitionId  ")
+    @Query("DELETE FROM `table` WHERE competitionId=:competitionId")
     abstract fun deleteAll(competitionId: Int?)
 }

@@ -87,7 +87,7 @@ class DbManager @Inject constructor(
     }
 
     fun getSquad(teamId: Int?): DataSource.Factory<Int, Squad> {
-        return squadDao.getSquadForCompetition(teamId)
+        return squadDao.getSquadForTeam(teamId)
     }
 
     fun deleteAllSquads(): Observable<Unit>? {

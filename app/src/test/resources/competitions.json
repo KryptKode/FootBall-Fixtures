@@ -1,0 +1,254 @@
+{
+  "count": 12,
+  "filters": {
+    "plan": "TIER_ONE"
+  },
+  "competitions": [
+    {
+      "id": 2013,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Série A",
+      "code": "BSA",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 460,
+        "startDate": "2019-04-28",
+        "endDate": "2019-12-08",
+        "currentMatchday": 11,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 3,
+      "lastUpdated": "2019-07-20T00:00:01Z"
+    },
+    {
+      "id": 2021,
+      "area": {
+        "id": 2072,
+        "name": "England"
+      },
+      "name": "Premier League",
+      "code": "PL",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 468,
+        "startDate": "2019-08-10",
+        "endDate": "2020-05-17",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 27,
+      "lastUpdated": "2019-05-12T20:05:45Z"
+    },
+    {
+      "id": 2016,
+      "area": {
+        "id": 2072,
+        "name": "England"
+      },
+      "name": "Championship",
+      "code": "ELC",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 503,
+        "startDate": "2019-08-02",
+        "endDate": "2020-05-27",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 3,
+      "lastUpdated": "2019-05-27T22:51:02Z"
+    },
+    {
+      "id": 2001,
+      "area": {
+        "id": 2077,
+        "name": "Europe"
+      },
+      "name": "UEFA Champions League",
+      "code": "CL",
+      "emblemUrl": "https://upload.wikimedia.org/wikipedia/en/b/bf/UEFA_Champions_League_logo_2.svg",
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 19,
+      "lastUpdated": "2019-07-18T03:15:00Z"
+    },
+    {
+      "id": 2018,
+      "area": {
+        "id": 2077,
+        "name": "Europe"
+      },
+      "name": "European Championship",
+      "code": "EC",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 507,
+        "startDate": "2020-06-12",
+        "endDate": "2020-07-12",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 2,
+      "lastUpdated": "2018-08-23T12:16:01Z"
+    },
+    {
+      "id": 2015,
+      "area": {
+        "id": 2081,
+        "name": "France"
+      },
+      "name": "Ligue 1",
+      "code": "FL1",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 499,
+        "startDate": "2019-08-10",
+        "endDate": "2020-05-31",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 9,
+      "lastUpdated": "2019-06-03T09:55:00Z"
+    },
+    {
+      "id": 2002,
+      "area": {
+        "id": 2088,
+        "name": "Germany"
+      },
+      "name": "Bundesliga",
+      "code": "BL1",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 474,
+        "startDate": "2019-08-16",
+        "endDate": "2020-05-16",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 24,
+      "lastUpdated": "2019-05-27T22:30:42Z"
+    },
+    {
+      "id": 2019,
+      "area": {
+        "id": 2114,
+        "name": "Italy"
+      },
+      "name": "Serie A",
+      "code": "SA",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 530,
+        "startDate": "2019-08-24",
+        "endDate": "2020-05-24",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 15,
+      "lastUpdated": "2019-05-27T15:35:05Z"
+    },
+    {
+      "id": 2003,
+      "area": {
+        "id": 2163,
+        "name": "Netherlands"
+      },
+      "name": "Eredivisie",
+      "code": "DED",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 481,
+        "startDate": "2019-08-09",
+        "endDate": "2020-05-25",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 10,
+      "lastUpdated": "2019-05-28T23:44:43Z"
+    },
+    {
+      "id": 2017,
+      "area": {
+        "id": 2187,
+        "name": "Portugal"
+      },
+      "name": "Primeira Liga",
+      "code": "PPL",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 484,
+        "startDate": "2019-08-10",
+        "endDate": "2020-05-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 9,
+      "lastUpdated": "2019-05-20T22:05:06Z"
+    },
+    {
+      "id": 2014,
+      "area": {
+        "id": 2224,
+        "name": "Spain"
+      },
+      "name": "Primera Division",
+      "code": "PD",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 519,
+        "startDate": "2019-08-16",
+        "endDate": "2020-05-24",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "numberOfAvailableSeasons": 27,
+      "lastUpdated": "2019-05-19T22:40:09Z"
+    },
+    {
+      "id": 2000,
+      "area": {
+        "id": 2267,
+        "name": "World"
+      },
+      "name": "FIFA World Cup",
+      "code": "WC",
+      "emblemUrl": null,
+      "plan": "TIER_ONE",
+      "currentSeason": {
+        "id": 1,
+        "startDate": "2018-06-14",
+        "endDate": "2018-07-15",
+        "currentMatchday": 3,
+        "winner": {
+          "id": 773,
+          "name": "France",
+          "shortName": "France",
+          "tla": "FRA",
+          "crestUrl": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg"
+        }
+      },
+      "numberOfAvailableSeasons": 2,
+      "lastUpdated": "2018-08-23T12:16:17Z"
+    }
+  ]
+}
