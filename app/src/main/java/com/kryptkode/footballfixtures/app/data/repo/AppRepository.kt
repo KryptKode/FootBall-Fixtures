@@ -1,6 +1,5 @@
 package com.kryptkode.footballfixtures.app.data.repo
 
-import android.content.Context
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.kryptkode.footballfixtures.app.data.api.ApiManager
@@ -12,6 +11,7 @@ import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.data.models.squad.Squad
 import com.kryptkode.footballfixtures.app.data.models.table.Table
 import com.kryptkode.footballfixtures.app.data.models.team.Team
+import com.kryptkode.footballfixtures.app.utils.ErrorHandler
 import com.kryptkode.footballfixtures.app.utils.schedulers.AppSchedulers
 import javax.inject.Inject
 
@@ -19,7 +19,7 @@ class AppRepository @Inject constructor(
     private val schedulers: AppSchedulers,
     private val dbManager: DbManager,
     private val apiManager: ApiManager,
-    private val context: Context
+    private val errorHandler: ErrorHandler
 ) {
 
     /**
@@ -46,7 +46,7 @@ class AppRepository @Inject constructor(
                 schedulers,
                 apiManager,
                 dbManager,
-                context
+                errorHandler
             )
         val networkState = boundaryCallback.networkState
 
@@ -93,7 +93,7 @@ class AppRepository @Inject constructor(
                 schedulers,
                 apiManager,
                 dbManager,
-                context
+                errorHandler
             )
         val networkState = boundaryCallback.networkState
 
@@ -138,11 +138,11 @@ class AppRepository @Inject constructor(
         // the list and update the database with extra data
         val boundaryCallback =
             TableBoundaryCallback(
+                competitionId,
                 schedulers,
                 apiManager,
                 dbManager,
-                context,
-                competitionId
+                errorHandler
             )
         val networkState = boundaryCallback.networkState
 
@@ -187,11 +187,11 @@ class AppRepository @Inject constructor(
         // the list and update the database with extra data
         val boundaryCallback =
             TeamBoundaryCallback(
+                competitionId,
                 schedulers,
                 apiManager,
                 dbManager,
-                context,
-                competitionId
+                errorHandler
             )
         val networkState = boundaryCallback.networkState
 
@@ -217,11 +217,11 @@ class AppRepository @Inject constructor(
 
     /**
      * Get squad data for a particular team
-     * @param team The team
+     * @param teamId The team ID
      */
-    fun getSquadForTeam(team: Team?): Listing<Squad> {
+    fun getSquadForTeam(teamId: Int?): Listing<Squad> {
         // Get data source factory from the local cache
-        val dataSourceFactory = dbManager.getSquad(team?.id)
+        val dataSourceFactory = dbManager.getSquad(teamId)
 
 
         val pagedListConfig = PagedList.Config.Builder()
@@ -236,11 +236,11 @@ class AppRepository @Inject constructor(
         // the list and update the database with extra data
         val boundaryCallback =
             SquadBoundaryCallback(
+                teamId,
                 schedulers,
                 apiManager,
                 dbManager,
-                context,
-                team
+                errorHandler
             )
         val networkState = boundaryCallback.networkState
 
@@ -285,11 +285,11 @@ class AppRepository @Inject constructor(
         // the list and update the database with extra data
         val boundaryCallback =
             FixturesBoundaryCallback(
+                competitionId,
                 schedulers,
                 apiManager,
                 dbManager,
-                context,
-                competitionId
+                errorHandler
             )
         val networkState = boundaryCallback.networkState
 
@@ -316,7 +316,7 @@ class AppRepository @Inject constructor(
 
     companion object {
         private const val DATABASE_PAGE_SIZE = 10
-        private const val DATABASE_INITIAL_PAGE_SIZE = 20
+        const val DATABASE_INITIAL_PAGE_SIZE = 20
     }
 
 }

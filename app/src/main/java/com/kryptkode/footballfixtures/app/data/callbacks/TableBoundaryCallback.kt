@@ -1,12 +1,11 @@
 package com.kryptkode.footballfixtures.app.data.callbacks
 
-import android.content.Context
 import com.kryptkode.footballfixtures.app.data.api.ApiManager
+import com.kryptkode.footballfixtures.app.data.api.models.TableResponse
 import com.kryptkode.footballfixtures.app.data.callbacks.base.BaseBoundaryCallback
 import com.kryptkode.footballfixtures.app.data.db.DbManager
 import com.kryptkode.footballfixtures.app.data.models.table.Standings
 import com.kryptkode.footballfixtures.app.data.models.table.Table
-import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.ErrorHandler
 import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.schedulers.AppSchedulers
@@ -16,12 +15,14 @@ import javax.inject.Inject
 
 class TableBoundaryCallback
 @Inject constructor(
-    private val schedulers: AppSchedulers,
-    private val apiManager: ApiManager,
-    private val dbManager: DbManager,
-    private val context: Context,
-    protected val competitionId: Int?
-) : BaseBoundaryCallback<Table>() {
+    protected val competitionId: Int?,
+    schedulers: AppSchedulers,
+    apiManager: ApiManager,
+    dbManager: DbManager,
+    errorHandler: ErrorHandler
+) : BaseBoundaryCallback<Table>(schedulers, apiManager, dbManager, errorHandler) {
+
+    var tableResponse : TableResponse? = null
 
     override fun requestAndSaveData() {
         loadData(false)
@@ -29,7 +30,7 @@ class TableBoundaryCallback
 
     private fun handleError(it: Throwable) {
         Timber.e(it)
-        val error = ErrorHandler(context).getErrorMessage(it)
+        val error = errorHandler.getErrorMessage(it)
         networkState.postValue(NetworkState.error(error))
     }
 
@@ -39,6 +40,7 @@ class TableBoundaryCallback
         disposable.add(
             apiManager.getTableForCompetition(competitionId)
                 .map {
+                    tableResponse = it
                     Timber.d("Response: $it")
                     val standing = if (it.standings?.size ?: 0 > 0) {
                         it.standings?.get(0)

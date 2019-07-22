@@ -18,26 +18,12 @@ class OkhttpClientModule {
 
     @AppScope
     @Provides
-    fun provideFile(context: Context): File{
-        return File(context.cacheDir, Constants.OK_HTTP_CACHE)
-    }
-
-    @AppScope
-    @Provides
-    fun provideCache(file: File): Cache?{
-        return Cache(file, 10 * 1000 * 1000)
-    }
-
-    @AppScope
-    @Provides
-    fun provideOkhttpClient(cache: Cache?, httpInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun provideOkhttpClient(httpInterceptor: HttpLoggingInterceptor): OkHttpClient {
         val builder = OkHttpClient.Builder()
         builder.addInterceptor(httpInterceptor)
-        builder.cache(cache)
         builder.retryOnConnectionFailure(true)
         builder.writeTimeout(Constants.WRITE_TIME_OUT, TimeUnit.SECONDS)
         builder.connectTimeout(Constants.CONNECT_TIME_OUT, TimeUnit.SECONDS)
-
         return builder.build()
     }
 }

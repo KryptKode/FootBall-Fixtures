@@ -43,7 +43,7 @@ class FixturesFragment @Inject constructor() :
                 showView(
                     binding.includeError.root,
                     binding.includeError.tvMessage,
-                    it.msg ?: getString(R.string.unknown_exception)
+                    getString(it.msg ?: R.string.unknown_exception)
                 )
             } else {
                 hideView(binding.includeError.root)

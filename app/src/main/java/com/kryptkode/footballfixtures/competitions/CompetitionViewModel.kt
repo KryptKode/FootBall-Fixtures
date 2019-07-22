@@ -11,10 +11,9 @@ import com.kryptkode.footballfixtures.app.utils.SingleLiveEvent
 import javax.inject.Inject
 
 class CompetitionViewModel @Inject constructor(
-    private val repository: AppRepository,
-    application: Application
+    private val repository: AppRepository
 ) :
-    BaseViewModel(application) {
+    BaseViewModel() {
 
     private val blank = MutableLiveData<Unit>()
     private var loaded = false

@@ -2,19 +2,14 @@ package com.kryptkode.footballfixtures.competitions.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.google.android.material.tabs.TabLayoutMediator
 import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.activity.BaseViewModelActivity
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.utils.Constants
-import com.kryptkode.footballfixtures.competitions.detail.fixtures.FixturesFragment
 import com.kryptkode.footballfixtures.databinding.ActivityCompetitonDetailBinding
 import javax.inject.Inject
-import javax.inject.Named
 
 class CompetitionsDetailActivity :
     BaseViewModelActivity<ActivityCompetitonDetailBinding, CompetitionsDetailViewModel>() {

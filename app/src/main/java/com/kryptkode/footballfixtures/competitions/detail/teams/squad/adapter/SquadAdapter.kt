@@ -1,4 +1,4 @@
-package com.kryptkode.footballfixtures.competitions.detail.teams.detail.adapter
+package com.kryptkode.footballfixtures.competitions.detail.teams.squad.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,14 +7,14 @@ import com.kryptkode.footballfixtures.app.data.models.squad.Squad
 import com.kryptkode.footballfixtures.databinding.ItemTeamDetailBinding
 
 
-class TeamDetailAdapter :
-    BaseRecyclerPagingAdapter<Squad, TeamDetailViewHolder>(Squad.diffUtil) {
+class SquadAdapter :
+    BaseRecyclerPagingAdapter<Squad, SquadViewHolder>(Squad.diffUtil) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): TeamDetailViewHolder {
-        return TeamDetailViewHolder(
+    ): SquadViewHolder {
+        return SquadViewHolder(
             ItemTeamDetailBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,

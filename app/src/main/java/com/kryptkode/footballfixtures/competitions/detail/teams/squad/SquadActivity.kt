@@ -1,4 +1,4 @@
-package com.kryptkode.footballfixtures.competitions.detail.teams.detail
+package com.kryptkode.footballfixtures.competitions.detail.teams.squad
 
 import android.os.Bundle
 import com.kryptkode.footballfixtures.app.base.activity.BaseFragmentActivity
@@ -12,12 +12,12 @@ import com.r0adkll.slidr.model.SlidrConfig
 import com.r0adkll.slidr.model.SlidrPosition
 
 
-class TeamDetailActivity : BaseFragmentActivity<TeamDetailFragment>() {
+class SquadActivity : BaseFragmentActivity<SquadFragment>() {
 
     @Inject
-    lateinit var teamDetailFragment: TeamDetailFragment
+    lateinit var squadFragment: SquadFragment
 
-    override val fragment: TeamDetailFragment
+    override val fragment: SquadFragment
         get() = bindArgsToFragment()
 
 
@@ -36,8 +36,8 @@ class TeamDetailActivity : BaseFragmentActivity<TeamDetailFragment>() {
         Slidr.attach(this, config)
     }
 
-    private fun bindArgsToFragment():TeamDetailFragment{
-        teamDetailFragment.arguments = intent?.getBundleExtra(Constants.EXTRAS)
-        return  teamDetailFragment
+    private fun bindArgsToFragment():SquadFragment{
+        squadFragment.arguments = intent?.getBundleExtra(Constants.EXTRAS)
+        return  squadFragment
     }
 }

@@ -4,7 +4,7 @@ import com.kryptkode.footballfixtures.competitions.CompetitionsFragment
 import com.kryptkode.footballfixtures.competitions.detail.fixtures.FixturesFragment
 import com.kryptkode.footballfixtures.competitions.detail.table.TableFragment
 import com.kryptkode.footballfixtures.competitions.detail.teams.TeamsFragment
-import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailFragment
+import com.kryptkode.footballfixtures.competitions.detail.teams.squad.SquadFragment
 import com.kryptkode.footballfixtures.todaysfixtures.TodaysFixturesFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -29,6 +29,6 @@ abstract class FragmentModule {
     abstract fun teamFragment(): TeamsFragment
 
     @ContributesAndroidInjector
-    abstract fun teamDetailFragment(): TeamDetailFragment
+    abstract fun teamDetailFragment(): SquadFragment
 
 }

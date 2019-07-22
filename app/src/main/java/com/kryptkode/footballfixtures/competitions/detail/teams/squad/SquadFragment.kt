@@ -1,4 +1,4 @@
-package com.kryptkode.footballfixtures.competitions.detail.teams.detail
+package com.kryptkode.footballfixtures.competitions.detail.teams.squad
 
 import android.os.Bundle
 import android.view.View
@@ -16,17 +16,16 @@ import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider
 import com.kryptkode.footballfixtures.app.views.PlaceHolderDrawable
-import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailActivity
-import com.kryptkode.footballfixtures.competitions.detail.teams.detail.adapter.TeamDetailAdapter
+import com.kryptkode.footballfixtures.competitions.detail.teams.squad.adapter.SquadAdapter
 import com.kryptkode.footballfixtures.databinding.FragmentTeamDetailBinding
 import com.kryptkode.imageloader.ImageLoader
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class TeamDetailFragment @Inject constructor() :
-    BaseFragment<FragmentTeamDetailBinding, TeamDetailViewModel>(), HasAndroidInjector {
+class SquadFragment @Inject constructor() :
+    BaseFragment<FragmentTeamDetailBinding, SquadViewModel>(), HasAndroidInjector {
 
-    private val adapter = TeamDetailAdapter()
+    private val adapter = SquadAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -50,7 +49,7 @@ class TeamDetailFragment @Inject constructor() :
                 showView(
                     binding.includeError.root,
                     binding.includeError.tvMessage,
-                    it.msg ?: getString(R.string.unknown_exception)
+                    getString(it.msg ?: R.string.unknown_exception)
                 )
             } else {
                 hideView(binding.includeError.root)
@@ -84,7 +83,7 @@ class TeamDetailFragment @Inject constructor() :
             )
         }
 
-        (activity as TeamDetailActivity?)?.setSupportActionBar(binding.toolbar)
+        (activity as SquadActivity?)?.setSupportActionBar(binding.toolbar)
 
         binding.toolbar.setNavigationIcon(R.drawable.ic_close)
         binding.toolbar.setNavigationOnClickListener {
@@ -121,7 +120,7 @@ class TeamDetailFragment @Inject constructor() :
     }
 
     private fun loadData() {
-        viewModel.loadData(getTeam())
+        viewModel.loadData(getTeam()?.id)
     }
 
     private fun getTeam() = arguments?.getParcelable<Team>(Constants.EXTRAS)
@@ -130,11 +129,11 @@ class TeamDetailFragment @Inject constructor() :
 
     override fun getBindingVariable() = BR._all
 
-    override fun getViewModelClass() = TeamDetailViewModel::class.java
+    override fun getViewModelClass() = SquadViewModel::class.java
 
     companion object {
-        fun newInstance(team: Team?): TeamDetailFragment {
-            val fragment = TeamDetailFragment()
+        fun newInstance(team: Team?): SquadFragment {
+            val fragment = SquadFragment()
             val data = Bundle()
             data.putParcelable(Constants.EXTRAS, team)
             fragment.arguments = data

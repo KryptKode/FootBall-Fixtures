@@ -3,7 +3,6 @@ package com.kryptkode.footballfixtures.competitions.detail.teams
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.kryptkode.footballfixtures.BR
@@ -14,14 +13,10 @@ import com.kryptkode.footballfixtures.app.data.models.team.Team
 import com.kryptkode.footballfixtures.app.utils.Constants
 import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
-import com.kryptkode.footballfixtures.app.views.ItemDivider
 import com.kryptkode.footballfixtures.app.views.StaggeredGridSpacingItemDecoration
-import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailActivity
-import com.kryptkode.footballfixtures.competitions.detail.fixtures.FixturesViewModel
 import com.kryptkode.footballfixtures.competitions.detail.teams.adapter.TeamAdapter
 import com.kryptkode.footballfixtures.competitions.detail.teams.adapter.TeamListener
-import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailActivity
-import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailFragment
+import com.kryptkode.footballfixtures.competitions.detail.teams.squad.SquadActivity
 import com.kryptkode.footballfixtures.databinding.FragmentTeamsBinding
 import javax.inject.Inject
 
@@ -56,7 +51,7 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
                 showView(
                     binding.includeError.root,
                     binding.includeError.tvMessage,
-                    it.msg ?: getString(R.string.unknown_exception)
+                    getString(it.msg ?: R.string.unknown_exception)
                 )
             } else {
                 hideView(binding.includeError.root)
@@ -76,7 +71,7 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
         viewModel.openDetail.observe(this, Observer {
             val data = Bundle()
             data.putParcelable(Constants.EXTRAS, it)
-            startNewActivity(TeamDetailActivity::class.java, data = data)
+            startNewActivity(SquadActivity::class.java, data = data)
 
             activity?.overridePendingTransition(R.anim.slide_up_bottom,
                 R.anim.slide_down_top)

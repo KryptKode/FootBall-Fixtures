@@ -72,9 +72,11 @@ ext {
     coroutineVersion = "1.1.1"
 
     testRunner = '1.1.1'
-    coreTesting = '1.1.1'
+    coreTesting = '1.0.0'
     mockkVersion = "1.9"
     androidJunit = "1.1.0"
     gsonVersion = "2.8.5"
     androidSvgVersion = "1.2.1"
+    fragment_version = "1.2.0-alpha01"
+
 }

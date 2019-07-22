@@ -7,7 +7,7 @@ import com.kryptkode.footballfixtures.app.base.viewmodel.BaseViewModel
 import com.kryptkode.footballfixtures.app.utils.SingleLiveEvent
 import javax.inject.Inject
 
-class MainViewModel @Inject constructor(application: Application) : BaseViewModel(application) {
+class MainViewModel @Inject constructor() : BaseViewModel() {
     private val _showExitPrompt: SingleLiveEvent<Unit> = SingleLiveEvent()
     val showExitPrompt: LiveData<Unit> = _showExitPrompt
 

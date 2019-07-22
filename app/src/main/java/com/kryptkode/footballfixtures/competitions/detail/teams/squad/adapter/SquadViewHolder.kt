@@ -1,10 +1,10 @@
-package com.kryptkode.footballfixtures.competitions.detail.teams.detail.adapter
+package com.kryptkode.footballfixtures.competitions.detail.teams.squad.adapter
 
 import com.kryptkode.footballfixtures.app.base.recycler.BaseRecyclerViewHolder
 import com.kryptkode.footballfixtures.app.data.models.squad.Squad
 import com.kryptkode.footballfixtures.databinding.ItemTeamDetailBinding
 
-class TeamDetailViewHolder(binding: ItemTeamDetailBinding) :
+class SquadViewHolder(binding: ItemTeamDetailBinding) :
     BaseRecyclerViewHolder<Squad, ItemTeamDetailBinding>(binding) {
 
     override fun performBind(item: Squad?) {

@@ -3,7 +3,7 @@ package com.kryptkode.footballfixtures.app.di.ui
 
 import com.kryptkode.footballfixtures.MainActivity
 import com.kryptkode.footballfixtures.competitions.detail.CompetitionsDetailActivity
-import com.kryptkode.footballfixtures.competitions.detail.teams.detail.TeamDetailActivity
+import com.kryptkode.footballfixtures.competitions.detail.teams.squad.SquadActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -18,6 +18,6 @@ abstract class ActivityModule {
 
 
     @ContributesAndroidInjector
-    abstract fun bindTeamDetailActivity(): TeamDetailActivity
+    abstract fun bindTeamDetailActivity(): SquadActivity
 
 }

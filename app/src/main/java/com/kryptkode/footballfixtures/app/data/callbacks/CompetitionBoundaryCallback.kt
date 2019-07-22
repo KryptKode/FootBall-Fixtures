@@ -1,7 +1,8 @@
 package com.kryptkode.footballfixtures.app.data.callbacks
 
-import android.content.Context
+import androidx.annotation.VisibleForTesting
 import com.kryptkode.footballfixtures.app.data.api.ApiManager
+import com.kryptkode.footballfixtures.app.data.api.models.CompetitionResponse
 import com.kryptkode.footballfixtures.app.data.db.DbManager
 import com.kryptkode.footballfixtures.app.data.callbacks.base.BaseBoundaryCallback
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
@@ -17,25 +18,29 @@ import javax.inject.Inject
  * the database cannot provide any more data
  **/
 class CompetitionBoundaryCallback @Inject constructor(
-    private val schedulers: AppSchedulers,
-    private val apiManager: ApiManager,
-    private val dbManager: DbManager,
-    private val context: Context
-) : BaseBoundaryCallback<Competition>() {
+    schedulers: AppSchedulers,
+    apiManager: ApiManager,
+    dbManager: DbManager,
+    errorHandler: ErrorHandler
+) : BaseBoundaryCallback<Competition>(schedulers, apiManager, dbManager, errorHandler) {
+
+    @VisibleForTesting
+    var competitionData: CompetitionResponse? = null
 
     override fun requestAndSaveData() {
         if (networkState.value == NetworkState.LOADING) return
         networkState.postValue(NetworkState.LOADING)
         disposable.add(apiManager.getCompetitions()
-            .flatMap {dbManager.insertCompetitions(it.competitions) }
+            .flatMap {
+                competitionData = it
+                dbManager.insertCompetitions(it.competitions)
+            }
             .subscribeOn(schedulers.network).subscribe({
                 networkState.postValue(NetworkState.LOADED)
             }, {
                 Timber.e(it)
-                val error = ErrorHandler(context).getErrorMessage(it)
+                val error = errorHandler.getErrorMessage(it)
                 networkState.postValue(NetworkState.error(error))
-            }, {
-                networkState.postValue(NetworkState.LOADED)
             })
         )
     }

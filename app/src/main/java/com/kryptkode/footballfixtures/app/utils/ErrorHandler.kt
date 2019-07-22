@@ -7,20 +7,20 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import javax.inject.Inject
 
-class ErrorHandler @Inject constructor(var context: Context) {
+class ErrorHandler @Inject constructor() {
 
 
-    fun getErrorMessage(e: Throwable): String {
-        if (e is ConnectException){
-            return context.getString(R.string.connect_exception)
+    fun getErrorMessage(e: Throwable): Int {
+        if (e is ConnectException) {
+            return R.string.connect_exception
         }
-        if (e is UnknownHostException){
-            return context.getString(R.string.unknown_host_exception)
+        if (e is UnknownHostException) {
+            return R.string.unknown_host_exception
         }
-        if (e is SocketTimeoutException){
-            return context.getString(R.string.timed_out_exception)
+        if (e is SocketTimeoutException) {
+            return R.string.timed_out_exception
         }
 
-        return context.getString(R.string.unknown_exception)
+        return R.string.unknown_exception
     }
 }

@@ -8,8 +8,7 @@ import com.kryptkode.footballfixtures.app.data.repo.AppRepository
 import javax.inject.Inject
 
 class TodaysFixturesViewModel @Inject constructor(
-    private val repository: AppRepository,
-    application: Application) : BaseViewModel(application){
+    private val repository: AppRepository) : BaseViewModel(){
 
     private val blank = MutableLiveData<Unit>()
     private var loaded = false

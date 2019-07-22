@@ -12,8 +12,8 @@ import timber.log.Timber
 import javax.inject.Inject
 
 class TeamsViewModel @Inject constructor(
-    private val repository: AppRepository,
-    application: Application) : BaseViewModel(application) {
+    private val repository: AppRepository
+) : BaseViewModel() {
 
     private val blank = MutableLiveData<Int>()
     private var loaded = false

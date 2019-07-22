@@ -27,7 +27,7 @@
         </activity>
         <activity android:name=".competitions.detail.CompetitionsDetailActivity" />
         <activity
-            android:name=".competitions.detail.teams.detail.TeamDetailActivity"
+            android:name=".competitions.detail.teams.squad.SquadActivity"
             android:theme="@style/AppTheme.NoActionBar.Transparent" />
     </application>
 

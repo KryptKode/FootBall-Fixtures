@@ -1,7 +1,7 @@
 package com.kryptkode.footballfixtures.app.data.callbacks
 
-import android.content.Context
 import com.kryptkode.footballfixtures.app.data.api.ApiManager
+import com.kryptkode.footballfixtures.app.data.api.models.TeamResponse
 import com.kryptkode.footballfixtures.app.data.callbacks.base.BaseBoundaryCallback
 import com.kryptkode.footballfixtures.app.data.db.DbManager
 import com.kryptkode.footballfixtures.app.data.models.team.Team
@@ -13,19 +13,19 @@ import javax.inject.Inject
 
 class TeamBoundaryCallback
 @Inject constructor(
-    private val schedulers: AppSchedulers,
-    private val apiManager: ApiManager,
-    private val dbManager: DbManager,
-    private val context: Context,
-    private val competitionId: Int?
-) : BaseBoundaryCallback<Team>() {
-
+    private val competitionId: Int?,
+    schedulers: AppSchedulers,
+    apiManager: ApiManager,
+    dbManager: DbManager,
+    errorHandler: ErrorHandler
+) : BaseBoundaryCallback<Team>(schedulers, apiManager, dbManager, errorHandler) {
+    var teamResponse : TeamResponse? = null
     override fun requestAndSaveData() {
         if (networkState.value == NetworkState.LOADING) return
         networkState.postValue(NetworkState.LOADING)
         disposable.add(apiManager.getTeamForCompetition(competitionId)
             .map {
-
+                teamResponse = it
                 val teamList = it.teams ?: mutableListOf()
                 for (i in teamList) {
                     i.competitionId = competitionId
@@ -37,7 +37,7 @@ class TeamBoundaryCallback
                 networkState.postValue(NetworkState.LOADED)
             }, {
                 Timber.e(it)
-                val error = ErrorHandler(context).getErrorMessage(it)
+                val error = errorHandler.getErrorMessage(it)
                 networkState.postValue(NetworkState.error(error))
             }, {
                 networkState.postValue(NetworkState.LOADED)
