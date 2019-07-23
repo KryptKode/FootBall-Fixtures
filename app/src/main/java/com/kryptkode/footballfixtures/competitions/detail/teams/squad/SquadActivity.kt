@@ -1,3 +1,9 @@
+/*
+ * Developed by kryptkode
+ * Last modified 7/23/19 10:21 AM
+ * Copyright (c) 2019. All rights reserved
+ */
+
 package com.kryptkode.footballfixtures.competitions.detail.teams.squad
 
 import android.os.Bundle
@@ -27,7 +33,7 @@ class SquadActivity : BaseFragmentActivity<SquadFragment>() {
     lateinit var squadFragment: SquadFragment
 
     override val fragment: SquadFragment
-        get() = bindArgsToFragment()
+        get() = getAfterBindingArgsToFragment()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +51,7 @@ class SquadActivity : BaseFragmentActivity<SquadFragment>() {
         Slidr.attach(this, config)
     }
 
-    private fun bindArgsToFragment():SquadFragment{
+    private fun getAfterBindingArgsToFragment(): SquadFragment {
         squadFragment.arguments = intent?.getBundleExtra(Constants.EXTRAS)
         return  squadFragment
     }

@@ -1,3 +1,9 @@
+/*
+ * Developed by kryptkode
+ * Last modified 7/23/19 10:16 AM
+ * Copyright (c) 2019. All rights reserved
+ */
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
@@ -19,7 +25,7 @@ android {
         multiDexEnabled true
 
         buildConfigField("String", "BASE_URL", "\"https://api.football-data.org/v2/\"")
-        buildConfigField("String", "API_TOKEN", "\"3d373f599d4047bb95b8f20fa1dd16b5\"")
+        buildConfigField("String", "API_TOKEN", "\"\"")
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -62,10 +68,6 @@ dependencies {
 
     //Android Kotlin extensions
     implementation "androidx.core:core-ktx:$ktxVersion"
-
-    //coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion"
 
     //appcompat
     implementation "androidx.appcompat:appcompat:$supportLibVersion"
@@ -117,10 +119,6 @@ dependencies {
     releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
     testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
 
-
-    //shimmer
-    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
-
     //imageloader
     implementation project(":imageloader")
 
@@ -137,7 +135,6 @@ dependencies {
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     //noinspection GradleDependency
     testImplementation "com.squareup.okhttp3:mockwebserver:3.9.0"
-    testImplementation 'org.robolectric:robolectric:4.2'
     testImplementation "com.google.dagger:dagger:$daggerVersion"
     kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"
 
