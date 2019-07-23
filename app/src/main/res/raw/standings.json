@@ -1,0 +1,1004 @@
+{
+  "filters": {},
+  "competition": {
+    "id": 2013,
+    "area": {
+      "id": 2032,
+      "name": "Brazil"
+    },
+    "name": "Série A",
+    "code": "BSA",
+    "plan": "TIER_ONE",
+    "lastUpdated": "2019-07-20T00:00:01Z"
+  },
+  "season": {
+    "id": 460,
+    "startDate": "2019-04-28",
+    "endDate": "2019-12-08",
+    "currentMatchday": 11,
+    "winner": null
+  },
+  "standings": [
+    {
+      "stage": "REGULAR_SEASON",
+      "type": "TOTAL",
+      "group": null,
+      "table": [
+        {
+          "position": 1,
+          "team": {
+            "id": 1769,
+            "name": "SE Palmeiras",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 8,
+          "draw": 2,
+          "lost": 0,
+          "points": 26,
+          "goalsFor": 19,
+          "goalsAgainst": 3,
+          "goalDifference": 16
+        },
+        {
+          "position": 2,
+          "team": {
+            "id": 6685,
+            "name": "Santos FC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 7,
+          "draw": 2,
+          "lost": 1,
+          "points": 23,
+          "goalsFor": 13,
+          "goalsAgainst": 7,
+          "goalDifference": 6
+        },
+        {
+          "position": 3,
+          "team": {
+            "id": 1783,
+            "name": "CR Flamengo",
+            "crestUrl": ""
+          },
+          "playedGames": 10,
+          "won": 6,
+          "draw": 2,
+          "lost": 2,
+          "points": 20,
+          "goalsFor": 21,
+          "goalsAgainst": 10,
+          "goalDifference": 11
+        },
+        {
+          "position": 4,
+          "team": {
+            "id": 1766,
+            "name": "CA Mineiro",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 6,
+          "draw": 1,
+          "lost": 3,
+          "points": 19,
+          "goalsFor": 16,
+          "goalsAgainst": 12,
+          "goalDifference": 4
+        },
+        {
+          "position": 5,
+          "team": {
+            "id": 6684,
+            "name": "SC Internacional",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 5,
+          "draw": 1,
+          "lost": 4,
+          "points": 16,
+          "goalsFor": 13,
+          "goalsAgainst": 9,
+          "goalDifference": 4
+        },
+        {
+          "position": 6,
+          "team": {
+            "id": 1770,
+            "name": "Botafogo FR",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 5,
+          "draw": 1,
+          "lost": 4,
+          "points": 16,
+          "goalsFor": 8,
+          "goalsAgainst": 8,
+          "goalDifference": 0
+        },
+        {
+          "position": 7,
+          "team": {
+            "id": 4250,
+            "name": "Goiás EC",
+            "crestUrl": null
+          },
+          "playedGames": 9,
+          "won": 5,
+          "draw": 0,
+          "lost": 4,
+          "points": 15,
+          "goalsFor": 12,
+          "goalsAgainst": 14,
+          "goalDifference": -2
+        },
+        {
+          "position": 8,
+          "team": {
+            "id": 1779,
+            "name": "SC Corinthians Paulista",
+            "crestUrl": null
+          },
+          "playedGames": 9,
+          "won": 4,
+          "draw": 3,
+          "lost": 2,
+          "points": 15,
+          "goalsFor": 8,
+          "goalsAgainst": 5,
+          "goalDifference": 3
+        },
+        {
+          "position": 9,
+          "team": {
+            "id": 1776,
+            "name": "São Paulo FC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 3,
+          "draw": 6,
+          "lost": 1,
+          "points": 15,
+          "goalsFor": 9,
+          "goalsAgainst": 6,
+          "goalDifference": 3
+        },
+        {
+          "position": 10,
+          "team": {
+            "id": 1767,
+            "name": "Grêmio FBPA",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 4,
+          "draw": 2,
+          "lost": 4,
+          "points": 14,
+          "goalsFor": 12,
+          "goalsAgainst": 12,
+          "goalDifference": 0
+        },
+        {
+          "position": 11,
+          "team": {
+            "id": 1777,
+            "name": "EC Bahia",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 4,
+          "draw": 2,
+          "lost": 4,
+          "points": 14,
+          "goalsFor": 11,
+          "goalsAgainst": 12,
+          "goalDifference": -1
+        },
+        {
+          "position": 12,
+          "team": {
+            "id": 1768,
+            "name": "CA Paranaense",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 4,
+          "draw": 1,
+          "lost": 5,
+          "points": 13,
+          "goalsFor": 14,
+          "goalsAgainst": 12,
+          "goalDifference": 2
+        },
+        {
+          "position": 13,
+          "team": {
+            "id": 3984,
+            "name": "Fortaleza EC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 4,
+          "draw": 1,
+          "lost": 5,
+          "points": 13,
+          "goalsFor": 10,
+          "goalsAgainst": 13,
+          "goalDifference": -3
+        },
+        {
+          "position": 14,
+          "team": {
+            "id": 1837,
+            "name": "Ceará SC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 3,
+          "draw": 2,
+          "lost": 5,
+          "points": 11,
+          "goalsFor": 11,
+          "goalsAgainst": 10,
+          "goalDifference": 1
+        },
+        {
+          "position": 15,
+          "team": {
+            "id": 1765,
+            "name": "Fluminense FC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 2,
+          "draw": 3,
+          "lost": 5,
+          "points": 9,
+          "goalsFor": 14,
+          "goalsAgainst": 17,
+          "goalDifference": -3
+        },
+        {
+          "position": 16,
+          "team": {
+            "id": 1780,
+            "name": "CR Vasco da Gama",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 2,
+          "draw": 3,
+          "lost": 5,
+          "points": 9,
+          "goalsFor": 9,
+          "goalsAgainst": 16,
+          "goalDifference": -7
+        },
+        {
+          "position": 17,
+          "team": {
+            "id": 1771,
+            "name": "Cruzeiro EC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 2,
+          "draw": 3,
+          "lost": 5,
+          "points": 9,
+          "goalsFor": 9,
+          "goalsAgainst": 16,
+          "goalDifference": -7
+        },
+        {
+          "position": 18,
+          "team": {
+            "id": 1772,
+            "name": "Chapecoense AF",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 2,
+          "draw": 2,
+          "lost": 6,
+          "points": 8,
+          "goalsFor": 11,
+          "goalsAgainst": 16,
+          "goalDifference": -5
+        },
+        {
+          "position": 19,
+          "team": {
+            "id": 4244,
+            "name": "CS Alagoano",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 1,
+          "draw": 3,
+          "lost": 6,
+          "points": 6,
+          "goalsFor": 3,
+          "goalsAgainst": 16,
+          "goalDifference": -13
+        },
+        {
+          "position": 20,
+          "team": {
+            "id": 1775,
+            "name": "Avaí FC",
+            "crestUrl": null
+          },
+          "playedGames": 10,
+          "won": 0,
+          "draw": 4,
+          "lost": 6,
+          "points": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 13,
+          "goalDifference": -9
+        }
+      ]
+    },
+    {
+      "stage": "REGULAR_SEASON",
+      "type": "HOME",
+      "group": null,
+      "table": [
+        {
+          "position": 1,
+          "team": {
+            "id": 1769,
+            "name": "SE Palmeiras",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "points": 15,
+          "goalsFor": 12,
+          "goalsAgainst": 0,
+          "goalDifference": 12
+        },
+        {
+          "position": 2,
+          "team": {
+            "id": 1783,
+            "name": "CR Flamengo",
+            "crestUrl": ""
+          },
+          "playedGames": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "points": 15,
+          "goalsFor": 16,
+          "goalsAgainst": 5,
+          "goalDifference": 11
+        },
+        {
+          "position": 3,
+          "team": {
+            "id": 6684,
+            "name": "SC Internacional",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 5,
+          "draw": 0,
+          "lost": 0,
+          "points": 15,
+          "goalsFor": 12,
+          "goalsAgainst": 3,
+          "goalDifference": 9
+        },
+        {
+          "position": 4,
+          "team": {
+            "id": 6685,
+            "name": "Santos FC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 4,
+          "draw": 1,
+          "lost": 0,
+          "points": 13,
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7
+        },
+        {
+          "position": 5,
+          "team": {
+            "id": 1768,
+            "name": "CA Paranaense",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "points": 12,
+          "goalsFor": 9,
+          "goalsAgainst": 3,
+          "goalDifference": 6
+        },
+        {
+          "position": 6,
+          "team": {
+            "id": 4250,
+            "name": "Goiás EC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "points": 12,
+          "goalsFor": 9,
+          "goalsAgainst": 5,
+          "goalDifference": 4
+        },
+        {
+          "position": 7,
+          "team": {
+            "id": 1777,
+            "name": "EC Bahia",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "points": 12,
+          "goalsFor": 8,
+          "goalsAgainst": 5,
+          "goalDifference": 3
+        },
+        {
+          "position": 8,
+          "team": {
+            "id": 1766,
+            "name": "CA Mineiro",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "points": 10,
+          "goalsFor": 9,
+          "goalsAgainst": 5,
+          "goalDifference": 4
+        },
+        {
+          "position": 9,
+          "team": {
+            "id": 3984,
+            "name": "Fortaleza EC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "points": 10,
+          "goalsFor": 7,
+          "goalsAgainst": 4,
+          "goalDifference": 3
+        },
+        {
+          "position": 10,
+          "team": {
+            "id": 1779,
+            "name": "SC Corinthians Paulista",
+            "crestUrl": null
+          },
+          "playedGames": 4,
+          "won": 3,
+          "draw": 1,
+          "lost": 0,
+          "points": 10,
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "goalDifference": 3
+        },
+        {
+          "position": 11,
+          "team": {
+            "id": 1767,
+            "name": "Grêmio FBPA",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "points": 9,
+          "goalsFor": 9,
+          "goalsAgainst": 8,
+          "goalDifference": 1
+        },
+        {
+          "position": 12,
+          "team": {
+            "id": 1770,
+            "name": "Botafogo FR",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "points": 9,
+          "goalsFor": 5,
+          "goalsAgainst": 4,
+          "goalDifference": 1
+        },
+        {
+          "position": 13,
+          "team": {
+            "id": 1780,
+            "name": "CR Vasco da Gama",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "points": 8,
+          "goalsFor": 6,
+          "goalsAgainst": 5,
+          "goalDifference": 1
+        },
+        {
+          "position": 14,
+          "team": {
+            "id": 1771,
+            "name": "Cruzeiro EC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "points": 8,
+          "goalsFor": 4,
+          "goalsAgainst": 3,
+          "goalDifference": 1
+        },
+        {
+          "position": 15,
+          "team": {
+            "id": 1837,
+            "name": "Ceará SC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "points": 7,
+          "goalsFor": 7,
+          "goalsAgainst": 4,
+          "goalDifference": 3
+        },
+        {
+          "position": 16,
+          "team": {
+            "id": 1776,
+            "name": "São Paulo FC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 4,
+          "lost": 0,
+          "points": 7,
+          "goalsFor": 5,
+          "goalsAgainst": 3,
+          "goalDifference": 2
+        },
+        {
+          "position": 17,
+          "team": {
+            "id": 1765,
+            "name": "Fluminense FC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "points": 5,
+          "goalsFor": 5,
+          "goalsAgainst": 4,
+          "goalDifference": 1
+        },
+        {
+          "position": 18,
+          "team": {
+            "id": 1772,
+            "name": "Chapecoense AF",
+            "crestUrl": null
+          },
+          "playedGames": 6,
+          "won": 1,
+          "draw": 2,
+          "lost": 3,
+          "points": 5,
+          "goalsFor": 7,
+          "goalsAgainst": 9,
+          "goalDifference": -2
+        },
+        {
+          "position": 19,
+          "team": {
+            "id": 4244,
+            "name": "CS Alagoano",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "points": 5,
+          "goalsFor": 3,
+          "goalsAgainst": 5,
+          "goalDifference": -2
+        },
+        {
+          "position": 20,
+          "team": {
+            "id": 1775,
+            "name": "Avaí FC",
+            "crestUrl": null
+          },
+          "playedGames": 4,
+          "won": 0,
+          "draw": 3,
+          "lost": 1,
+          "points": 3,
+          "goalsFor": 2,
+          "goalsAgainst": 3,
+          "goalDifference": -1
+        }
+      ]
+    },
+    {
+      "stage": "REGULAR_SEASON",
+      "type": "AWAY",
+      "group": null,
+      "table": [
+        {
+          "position": 1,
+          "team": {
+            "id": 1769,
+            "name": "SE Palmeiras",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 2,
+          "lost": 0,
+          "points": 11,
+          "goalsFor": 7,
+          "goalsAgainst": 3,
+          "goalDifference": 4
+        },
+        {
+          "position": 2,
+          "team": {
+            "id": 6685,
+            "name": "Santos FC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "points": 10,
+          "goalsFor": 4,
+          "goalsAgainst": 5,
+          "goalDifference": -1
+        },
+        {
+          "position": 3,
+          "team": {
+            "id": 1766,
+            "name": "CA Mineiro",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 3,
+          "draw": 0,
+          "lost": 2,
+          "points": 9,
+          "goalsFor": 7,
+          "goalsAgainst": 7,
+          "goalDifference": 0
+        },
+        {
+          "position": 4,
+          "team": {
+            "id": 1776,
+            "name": "São Paulo FC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "points": 8,
+          "goalsFor": 4,
+          "goalsAgainst": 3,
+          "goalDifference": 1
+        },
+        {
+          "position": 5,
+          "team": {
+            "id": 1770,
+            "name": "Botafogo FR",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "points": 7,
+          "goalsFor": 3,
+          "goalsAgainst": 4,
+          "goalDifference": -1
+        },
+        {
+          "position": 6,
+          "team": {
+            "id": 1783,
+            "name": "CR Flamengo",
+            "crestUrl": ""
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "points": 5,
+          "goalsFor": 5,
+          "goalsAgainst": 5,
+          "goalDifference": 0
+        },
+        {
+          "position": 7,
+          "team": {
+            "id": 1779,
+            "name": "SC Corinthians Paulista",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "points": 5,
+          "goalsFor": 5,
+          "goalsAgainst": 5,
+          "goalDifference": 0
+        },
+        {
+          "position": 8,
+          "team": {
+            "id": 1767,
+            "name": "Grêmio FBPA",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "points": 5,
+          "goalsFor": 3,
+          "goalsAgainst": 4,
+          "goalDifference": -1
+        },
+        {
+          "position": 9,
+          "team": {
+            "id": 1837,
+            "name": "Ceará SC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "points": 4,
+          "goalsFor": 4,
+          "goalsAgainst": 6,
+          "goalDifference": -2
+        },
+        {
+          "position": 10,
+          "team": {
+            "id": 1765,
+            "name": "Fluminense FC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "points": 4,
+          "goalsFor": 9,
+          "goalsAgainst": 13,
+          "goalDifference": -4
+        },
+        {
+          "position": 11,
+          "team": {
+            "id": 1772,
+            "name": "Chapecoense AF",
+            "crestUrl": null
+          },
+          "playedGames": 4,
+          "won": 1,
+          "draw": 0,
+          "lost": 3,
+          "points": 3,
+          "goalsFor": 4,
+          "goalsAgainst": 7,
+          "goalDifference": -3
+        },
+        {
+          "position": 12,
+          "team": {
+            "id": 4250,
+            "name": "Goiás EC",
+            "crestUrl": null
+          },
+          "playedGames": 4,
+          "won": 1,
+          "draw": 0,
+          "lost": 3,
+          "points": 3,
+          "goalsFor": 3,
+          "goalsAgainst": 9,
+          "goalDifference": -6
+        },
+        {
+          "position": 13,
+          "team": {
+            "id": 3984,
+            "name": "Fortaleza EC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "points": 3,
+          "goalsFor": 3,
+          "goalsAgainst": 9,
+          "goalDifference": -6
+        },
+        {
+          "position": 14,
+          "team": {
+            "id": 1777,
+            "name": "EC Bahia",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 0,
+          "draw": 2,
+          "lost": 3,
+          "points": 2,
+          "goalsFor": 3,
+          "goalsAgainst": 7,
+          "goalDifference": -4
+        },
+        {
+          "position": 15,
+          "team": {
+            "id": 1768,
+            "name": "CA Paranaense",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "points": 1,
+          "goalsFor": 5,
+          "goalsAgainst": 9,
+          "goalDifference": -4
+        },
+        {
+          "position": 16,
+          "team": {
+            "id": 6684,
+            "name": "SC Internacional",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "points": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 6,
+          "goalDifference": -5
+        },
+        {
+          "position": 17,
+          "team": {
+            "id": 1771,
+            "name": "Cruzeiro EC",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "points": 1,
+          "goalsFor": 5,
+          "goalsAgainst": 13,
+          "goalDifference": -8
+        },
+        {
+          "position": 18,
+          "team": {
+            "id": 1780,
+            "name": "CR Vasco da Gama",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "points": 1,
+          "goalsFor": 3,
+          "goalsAgainst": 11,
+          "goalDifference": -8
+        },
+        {
+          "position": 19,
+          "team": {
+            "id": 1775,
+            "name": "Avaí FC",
+            "crestUrl": null
+          },
+          "playedGames": 6,
+          "won": 0,
+          "draw": 1,
+          "lost": 5,
+          "points": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 10,
+          "goalDifference": -8
+        },
+        {
+          "position": 20,
+          "team": {
+            "id": 4244,
+            "name": "CS Alagoano",
+            "crestUrl": null
+          },
+          "playedGames": 5,
+          "won": 0,
+          "draw": 1,
+          "lost": 4,
+          "points": 1,
+          "goalsFor": 0,
+          "goalsAgainst": 11,
+          "goalDifference": -11
+        }
+      ]
+    }
+  ]
+}

@@ -35,6 +35,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
+    //svg
+    implementation "com.caverock:androidsvg:$androidSvgVersion"
+
     // testing
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test:runner:$runnerVersion"

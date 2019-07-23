@@ -4,10 +4,406 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
         <item name="colorError">@color/colorError</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar.Transparent" >
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+
+    <style name="Guideline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Guideline.Vertical">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Guideline.Horizontal">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Guideline.Vertical.Left">
+        <item name="layout_constraintGuide_percent">0.03</item>
+    </style>
+
+    <style name="Guideline.Vertical.Right">
+        <item name="layout_constraintGuide_percent">0.97</item>
+    </style>
+
+    <style name="Guideline.Horizontal.Top">
+        <item name="layout_constraintGuide_percent">0.03</item>
+    </style>
+
+    <style name="Guideline.Horizontal.Bottom">
+        <item name="layout_constraintGuide_percent">0.95</item>
+    </style>
+
+
+    <style name="Barrier">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Barrier.Start">
+        <item name="barrierDirection">start</item>
+    </style>
+
+    <style name="Barrier.End">
+        <item name="barrierDirection">end</item>
+    </style>
+
+
+    <!--FIXTURES-->
+
+    <style name="TodaysFixtures">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TodaysFixtures.Item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Root">
+        <item name="android:padding">@dimen/fixtures_padding_root</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text">
+        <item name="android:layout_marginStart">@dimen/today_item_margin_horiz</item>
+        <item name="android:layout_marginEnd">@dimen/today_item_margin_horiz</item>
+        <item name="android:layout_marginLeft">@dimen/today_item_margin_horiz</item>
+        <item name="android:layout_marginRight">@dimen/today_item_margin_horiz</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Number">
+
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Status">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Team">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:maxLines">@integer/matches_list_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Time">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Md">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Score">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline
+        </item>
+    </style>
+
+    <style name="TodaysFixtures.Item.Text.Score.Small">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+
+    <!--COMPETITION-->
+
+    <style name="Competition">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Competition.Root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <style name="Competition.Item">
+
+    </style>
+
+
+    <style name="Competition.Item.Root">
+        <item name="android:padding">@dimen/competition_item_padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Competition.Item.Text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:maxLines">@integer/competition_list_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+    </style>
+
+
+    <style name="Competition.Item.Icon">
+        <item name="android:layout_width">@dimen/competition_arrow_icon_size</item>
+        <item name="android:layout_height">@dimen/competition_arrow_icon_size</item>
+        <item name="android:contentDescription">@string/competition_arrow_icon_content_description
+        </item>
+        <item name="srcCompat">@drawable/ic_arrow_right</item>
+        <item name="android:tint">?attr/colorSecondaryVariant</item>
+    </style>
+
+
+    <!--ERROR LAYOUT-->
+
+    <style name="ErrorLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ErrorLayout.Root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ErrorLayout.Root.Constraint">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="ErrorLayout.Root.Card">
+        <item name="cardElevation">@dimen/error_layout_card_elevation</item>
+    </style>
+
+    <style name="ErrorLayout.Retry" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">?attr/colorSecondary</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/retry</item>
+
+    </style>
+
+    <style name="ErrorLayout.Message">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/error_layout_text_padding</item>
+    </style>
+
+    <style name="ErrorLayout.Icon">
+        <item name="android:layout_width">@dimen/error_layout_icon_size</item>
+        <item name="android:layout_height">@dimen/error_layout_icon_size</item>
+        <item name="srcCompat">@drawable/ic_soccer</item>
+        <item name="android:tint">?attr/colorSecondaryVariant</item>
+        <item name="android:contentDescription">@string/error_layout_icon_content_description</item>
+    </style>
+
+
+    <!--EMPTY LAYOUT-->
+
+    <style name="EmptyLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EmptyLayout.Root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="EmptyLayout.Message">
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/error_layout_text_padding</item>
+    </style>
+
+    <style name="EmptyLayout.Icon">
+        <item name="android:layout_width">@dimen/error_layout_icon_size</item>
+        <item name="android:layout_height">@dimen/error_layout_icon_size</item>
+        <item name="srcCompat">@drawable/ic_soccer</item>
+        <item name="android:tint">?attr/colorSecondaryVariant</item>
+        <item name="android:contentDescription">@string/error_layout_icon_content_description</item>
+    </style>
+
+    <style name="RecyclerViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="fastScrollEnabled">true</item>
+        <item name="fastScrollHorizontalThumbDrawable">@drawable/thumb_drawable</item>
+        <item name="fastScrollHorizontalTrackDrawable">@drawable/line_drawable</item>
+        <item name="fastScrollVerticalThumbDrawable">@drawable/thumb_drawable</item>
+        <item name="fastScrollVerticalTrackDrawable">@drawable/line_drawable</item>
+    </style>
+
+    <!--TABLE-->
+
+    <style name="Table">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Table.Item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="Table.Item.Root">
+        <item name="android:padding">@dimen/table_item_padding_root</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Table.Item.Text">
+        <item name="android:layout_marginStart">@dimen/table_item_margin_horiz</item>
+        <item name="android:layout_marginEnd">@dimen/table_item_margin_horiz</item>
+        <item name="android:layout_marginLeft">@dimen/table_item_margin_horiz</item>
+        <item name="android:layout_marginRight">@dimen/table_item_margin_horiz</item>
+        <item name="android:maxLines">@integer/table_item_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="Table.Item.Text.Name">
+        <item name="android:maxLines">@integer/table_item_team_name_max_lines</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
+    <style name="Table.Item.TeamLogo">
+        <item name="android:layout_marginStart">@dimen/table_logo_margin_horiz</item>
+        <item name="android:layout_marginEnd">@dimen/table_logo_margin_horiz</item>
+        <item name="android:layout_marginLeft">@dimen/table_logo_margin_horiz</item>
+        <item name="android:layout_marginRight">@dimen/table_logo_margin_horiz</item>
+        <item name="android:layout_width">@dimen/table_team_logo_size</item>
+        <item name="android:layout_height">@dimen/table_team_logo_size</item>
+
+        <item name="android:contentDescription">@string/teams_logo_content_desc</item>
+    </style>
+
+    <style name="Fixtures">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Fixtures.Item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="Fixtures.Root">
+        <item name="android:padding">@dimen/fixtures_item_padding_root</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="Fixtures.Item.Text">
+        <item name="android:padding">@dimen/fixtures_item_padding_text</item>
+        <item name="android:maxLines">@integer/fixtures_item_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
+    <style name="Fixtures.Item.Text.Name">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Headline</item>
+    </style>
+
+    <style name="Fixtures.Item.Logo">
+        <item name="android:layout_width">@dimen/fixtures_team_logo_size</item>
+        <item name="android:layout_height">@dimen/table_team_logo_size</item>
+    </style>
+
+
+    <style name="Teams">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Teams.Item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+
+    <style name="Teams.Item.Card">
+        <item name="cardElevation">@dimen/team_card_elevation</item>
+        <item name="cardCornerRadius">@dimen/team_card_corner_radius</item>
+    </style>
+
+    <style name="Teams.Item.Root">
+        <item name="android:padding">@dimen/team_item_padding_root</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="Teams.Item.Text">
+        <item name="android:padding">@dimen/team_item_padding_text</item>
+        <item name="android:maxLines">@integer/team_item_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="Teams.Item.Logo">
+        <item name="android:layout_width">@dimen/team_logo_size</item>
+        <item name="android:layout_height">@dimen/team_logo_size</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="AppTheme" />
+
+
+    <style name="TeamsDetail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TeamsDetail.Root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="TeamsDetail.Title">
+        <item name="android:maxLines">@integer/team_detail_text_max_lines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="TeamsDetail.CloseButton">
+        <item name="srcCompat">@drawable/ic_close</item>
     </style>
 
 </resources>

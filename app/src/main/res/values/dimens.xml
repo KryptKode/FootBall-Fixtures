@@ -5,4 +5,37 @@
 
     <dimen name="bottom_nav_icon_size">48dp</dimen>
     <dimen name="bottom_nav_icon_margin_top">8dp</dimen>
+
+    <dimen name="today_item_margin_vert">8dp</dimen>
+    <dimen name="today_item_margin_horiz">8dp</dimen>
+    <dimen name="today_item_text_padding">8dp</dimen>
+
+    <dimen name="error_layout_card_elevation">8dp</dimen>
+    <dimen name="error_layout_text_padding">10dp</dimen>
+    <dimen name="error_layout_icon_size">48dp</dimen>
+
+    <dimen name="competition_item_padding">8dp</dimen>
+    <dimen name="competition_arrow_icon_size">48dp</dimen>
+    <dimen name="fixtures_padding_root">8dp</dimen>
+
+    <dimen name="table_team_logo_size">24dp</dimen>
+    <dimen name="table_item_padding_root">8dp</dimen>
+    <dimen name="table_item_margin_horiz">8dp</dimen>
+    <dimen name="table_item_padding">2dp</dimen>
+    <dimen name="table_logo_margin_horiz">12dp</dimen>
+
+    <dimen name="fixtures_item_padding_root">8dp</dimen>
+    <dimen name="fixtures_item_padding_text">4dp</dimen>
+    <dimen name="fixtures_team_logo_size">72dp</dimen>
+
+
+    <dimen name="team_item_padding_root">8dp</dimen>
+    <dimen name="team_item_padding_text">4dp</dimen>
+    <dimen name="team_logo_size">96dp</dimen>
+    <dimen name="team_card_elevation">8dp</dimen>
+    <dimen name="team_card_corner_radius">4dp</dimen>
+    <dimen name="teams_item_padding">8dp</dimen>
+    <dimen name="team_detail_peekable_height">100dp</dimen>
+    <dimen name="team_detail_margin_top">8dp</dimen>
+
 </resources>

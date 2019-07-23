@@ -1,0 +1,689 @@
+{
+  "count": 10,
+  "filters": {
+    "dateFrom": "2019-07-17",
+    "dateTo": "2019-07-17",
+    "permission": "TIER_ONE"
+  },
+  "matches": [
+    {
+      "id": 269502,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T16:30:00Z",
+      "status": "IN_PLAY",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": 0,
+          "awayTeam": 0
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 5826,
+        "name": "Rīga FC"
+      },
+      "awayTeam": {
+        "id": 1873,
+        "name": "Dundalk FC"
+      },
+      "referees": [
+        {
+          "id": 82274,
+          "name": "Dimitar Mečkarovski",
+          "nationality": null
+        },
+        {
+          "id": 100316,
+          "name": null,
+          "nationality": null
+        },
+        {
+          "id": 80972,
+          "name": "Goce Petreski",
+          "nationality": null
+        },
+        {
+          "id": 122027,
+          "name": null,
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269498,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T17:00:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 889,
+        "name": "Rosenborg BK"
+      },
+      "awayTeam": {
+        "id": 1896,
+        "name": "Linfield FC"
+      },
+      "referees": [
+        {
+          "id": 15430,
+          "name": "Enea Jorgji",
+          "nationality": null
+        },
+        {
+          "id": 98528,
+          "name": null,
+          "nationality": null
+        },
+        {
+          "id": 15433,
+          "name": "Kridens Meta",
+          "nationality": null
+        },
+        {
+          "id": 122028,
+          "name": null,
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269482,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T17:00:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 5277,
+        "name": "AIK Fotboll"
+      },
+      "awayTeam": {
+        "id": 8164,
+        "name": "FC Ararat-Armenia"
+      },
+      "referees": [
+        {
+          "id": 15214,
+          "name": "Robert Hennessy",
+          "nationality": null
+        },
+        {
+          "id": 36948,
+          "name": "Allen Lynch",
+          "nationality": null
+        },
+        {
+          "id": 15213,
+          "name": "Dermot Broughton",
+          "nationality": null
+        },
+        {
+          "id": 116382,
+          "name": null,
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269494,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T17:00:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 611,
+        "name": "Qarabağ Ağdam FK"
+      },
+      "awayTeam": {
+        "id": 7492,
+        "name": "FK Partizani"
+      },
+      "referees": [
+        {
+          "id": 79615,
+          "name": "Dumitru Muntean",
+          "nationality": null
+        },
+        {
+          "id": 79617,
+          "name": "Vlad Lifciu",
+          "nationality": null
+        },
+        {
+          "id": 79616,
+          "name": "Andrei Bodean",
+          "nationality": null
+        },
+        {
+          "id": 100305,
+          "name": null,
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269486,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T17:30:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 1901,
+        "name": "PFK Ludogorets 1945 Razgrad"
+      },
+      "awayTeam": {
+        "id": 5954,
+        "name": "Ferencvárosi TC"
+      },
+      "referees": [
+        {
+          "id": 43952,
+          "name": "Donatas Rumšas",
+          "nationality": null
+        },
+        {
+          "id": 43951,
+          "name": "Dovydas Sužiedėlis",
+          "nationality": null
+        },
+        {
+          "id": 56122,
+          "name": "Vytis Snarskis",
+          "nationality": null
+        },
+        {
+          "id": 56121,
+          "name": "Robertas Valikonis",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269484,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T18:00:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 5515,
+        "name": "FC CFR 1907 Cluj"
+      },
+      "awayTeam": {
+        "id": 1884,
+        "name": "Astana FK"
+      },
+      "referees": [
+        {
+          "id": 15022,
+          "name": "Alexander Harkam",
+          "nationality": null
+        },
+        {
+          "id": 60155,
+          "name": "Andreas Witschnigg",
+          "nationality": null
+        },
+        {
+          "id": 60177,
+          "name": "Andreas Staudinger",
+          "nationality": null
+        },
+        {
+          "id": 60161,
+          "name": "Christian-Petru Ciochirca",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269508,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T18:00:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 5628,
+        "name": "Piast Gliwice"
+      },
+      "awayTeam": {
+        "id": 748,
+        "name": "FK BATE Borisov"
+      },
+      "referees": [
+        {
+          "id": 56143,
+          "name": "Antti Munukka",
+          "nationality": null
+        },
+        {
+          "id": 55916,
+          "name": "Jukka Honkanen",
+          "nationality": null
+        },
+        {
+          "id": 56461,
+          "name": "Riku Vihreävuori",
+          "nationality": null
+        },
+        {
+          "id": 55886,
+          "name": "Mohammad Al Emara",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269500,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T18:15:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 734,
+        "name": "NK Maribor"
+      },
+      "awayTeam": {
+        "id": 5945,
+        "name": "KF Valur"
+      },
+      "referees": [
+        {
+          "id": 38806,
+          "name": "João Pedro Pinheiro",
+          "nationality": null
+        },
+        {
+          "id": 37626,
+          "name": "Rui Licínio Barbosa Tavares",
+          "nationality": null
+        },
+        {
+          "id": 37660,
+          "name": "Bruno Rodrigues",
+          "nationality": null
+        },
+        {
+          "id": 37342,
+          "name": "Cláudio Ruivo Pereira",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269496,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T18:15:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:48:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 7284,
+        "name": "FK Sutjeska Nikšić"
+      },
+      "awayTeam": {
+        "id": 7509,
+        "name": "ŠK Slovan Bratislava"
+      },
+      "referees": [
+        {
+          "id": 36478,
+          "name": "Horațiu Fesnic",
+          "nationality": null
+        },
+        {
+          "id": 36481,
+          "name": "Alexandru Cerei",
+          "nationality": null
+        },
+        {
+          "id": 36483,
+          "name": "Mihai Marica",
+          "nationality": null
+        },
+        {
+          "id": 37162,
+          "name": "Marius Avram",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 269488,
+      "competition": {
+        "id": 2001,
+        "name": "UEFA Champions League"
+      },
+      "season": {
+        "id": 495,
+        "startDate": "2019-06-25",
+        "endDate": "2020-05-30",
+        "currentMatchday": null,
+        "winner": null
+      },
+      "utcDate": "2019-07-17T18:45:00Z",
+      "status": "SCHEDULED",
+      "matchday": null,
+      "stage": "1ST_QUALIFYING_ROUND",
+      "group": null,
+      "lastUpdated": "2019-07-17T18:37:57Z",
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "halfTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 732,
+        "name": "Celtic FC"
+      },
+      "awayTeam": {
+        "id": 4275,
+        "name": "FK Sarajevo"
+      },
+      "referees": []
+    }
+  ]
+}

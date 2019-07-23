@@ -1,0 +1,404 @@
+{
+  "count": 20,
+  "filters": {},
+  "competition": {
+    "id": 2013,
+    "area": {
+      "id": 2032,
+      "name": "Brazil"
+    },
+    "name": "Série A",
+    "code": "BSA",
+    "plan": "TIER_ONE",
+    "lastUpdated": "2019-07-20T00:00:01Z"
+  },
+  "season": {
+    "id": 460,
+    "startDate": "2019-04-28",
+    "endDate": "2019-12-08",
+    "currentMatchday": 11,
+    "winner": null
+  },
+  "teams": [
+    {
+      "id": 1765,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Fluminense FC",
+      "shortName": "Fluminense",
+      "tla": "FLU",
+      "crestUrl": null,
+      "address": "Rua Álvaro Chaves 41, Bairro Laranjeiras Rio de Janeiro, RJ 22231-220",
+      "phone": "+55 (21) 25537240",
+      "website": "http://www.fluminense.com.br",
+      "email": "secretaria@fluminense.com.br",
+      "founded": 1902,
+      "clubColors": "Maroon / Green / White",
+      "venue": "Estadio Jornalista Mário Filho",
+      "lastUpdated": "2019-07-18T02:18:32Z"
+    },
+    {
+      "id": 1766,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "CA Mineiro",
+      "shortName": "Mineiro",
+      "tla": "CAM",
+      "crestUrl": null,
+      "address": "Av. Olegário Maciel 1516, Lourdes Belo Horizonte, MG 30180-111",
+      "phone": "+55 (31) 32901313",
+      "website": "http://www.atletico.com.br",
+      "email": "fut.base@galo.com.br",
+      "founded": 1908,
+      "clubColors": "Black / White",
+      "venue": "Estádio Raimundo Sampaio",
+      "lastUpdated": "2019-07-18T02:18:33Z"
+    },
+    {
+      "id": 1767,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Grêmio FBPA",
+      "shortName": "Grêmio",
+      "tla": "GRE",
+      "crestUrl": null,
+      "address": "Avenida Padre Leopoldo Bretano, 110, Humaitá Porto Alegre, RS 90250-590",
+      "phone": null,
+      "website": "http://www.gremio.net",
+      "email": null,
+      "founded": 1903,
+      "clubColors": "Blue / Black / White",
+      "venue": "Arena do Grêmio",
+      "lastUpdated": "2019-07-18T02:18:35Z"
+    },
+    {
+      "id": 1768,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "CA Paranaense",
+      "shortName": "Paranaense",
+      "tla": "CAP",
+      "crestUrl": null,
+      "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
+      "phone": "+55 (41) 21055500",
+      "website": "http://www.atleticoparanaense.com",
+      "email": "redesocialcap@atleticopr.com.br",
+      "founded": 1924,
+      "clubColors": "Black / White / Red",
+      "venue": "Estádio Joaquim Américo Guimarães",
+      "lastUpdated": "2019-07-18T02:18:36Z"
+    },
+    {
+      "id": 1769,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "SE Palmeiras",
+      "shortName": "Palmeiras",
+      "tla": "PAL",
+      "crestUrl": null,
+      "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+      "phone": "+55 (11) 38746500",
+      "website": "http://www.palmeiras.com.br",
+      "email": null,
+      "founded": 1914,
+      "clubColors": "Green / White",
+      "venue": "Allianz Parque",
+      "lastUpdated": "2019-07-18T02:18:38Z"
+    },
+    {
+      "id": 1770,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Botafogo FR",
+      "shortName": "Botafogo",
+      "tla": "BOT",
+      "crestUrl": null,
+      "address": "Avenida Venceslau Brás 72, Bairro Botafago Rio de Janeiro, RJ 22290-140",
+      "phone": "+55 (21) 25437272",
+      "website": "http://www.botafogo.com.br",
+      "email": "ouvidoria@botafogo.com.br",
+      "founded": 1904,
+      "clubColors": "Black / White",
+      "venue": "Estádio Nilton Santos",
+      "lastUpdated": "2019-07-18T02:18:38Z"
+    },
+    {
+      "id": 1771,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Cruzeiro EC",
+      "shortName": "Cruzeiro",
+      "tla": "CRU",
+      "crestUrl": null,
+      "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+      "phone": "+55 (31) 33491502",
+      "website": "http://www.cruzeiro.com.br",
+      "email": "assessoria@clube.cruzeiro.com.br",
+      "founded": 1921,
+      "clubColors": "Blue / White",
+      "venue": "Estádio Governador Magalhães Pinto",
+      "lastUpdated": "2019-07-18T02:18:40Z"
+    },
+    {
+      "id": 1772,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Chapecoense AF",
+      "shortName": "Chapecoense",
+      "tla": "CHA",
+      "crestUrl": null,
+      "address": "Rua Clevelândia S/N, Centro Chapecó, SC 89801-445",
+      "phone": "+55 (49) 39053700",
+      "website": "http://www.chapecoense.com",
+      "email": "comunicacao@chapecoense.com",
+      "founded": 1973,
+      "clubColors": "Green / White",
+      "venue": "Arena Condá",
+      "lastUpdated": "2019-07-18T02:18:41Z"
+    },
+    {
+      "id": 1775,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Avaí FC",
+      "shortName": "Avaí",
+      "tla": "AVA",
+      "crestUrl": null,
+      "address": "Av. Deputado Diomício Freitas, nº 1000, Bairro Carianos Florianópolis 88047-400",
+      "phone": "+55 (48) 32167300",
+      "website": "http://www.avai.com.br",
+      "email": "avai@avai.com.br",
+      "founded": 1923,
+      "clubColors": "Blue / White",
+      "venue": "Estádio Aderbal Ramos da Silva",
+      "lastUpdated": "2019-07-18T02:18:42Z"
+    },
+    {
+      "id": 1776,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "São Paulo FC",
+      "shortName": "São Paulo",
+      "tla": "SAO",
+      "crestUrl": null,
+      "address": "null São Paulo, SP null",
+      "phone": "+55 (11) 37498000",
+      "website": "http://www.saopaulofc.net",
+      "email": "site@saopaulofc.net",
+      "founded": 1930,
+      "clubColors": "White / Red / Black",
+      "venue": "Estádio do Morumbi",
+      "lastUpdated": "2019-07-18T02:18:43Z"
+    },
+    {
+      "id": 1777,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "EC Bahia",
+      "shortName": "Bahia",
+      "tla": "BAH",
+      "crestUrl": null,
+      "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
+      "phone": "+55 (71) 22031931",
+      "website": "http://www.esporteclubebahia.com.br",
+      "email": "contato@esporteclubebahia.com.br",
+      "founded": 1931,
+      "clubColors": "Blue / White / Red",
+      "venue": "Itaipava Arena Fonte Nova",
+      "lastUpdated": "2019-07-18T02:18:45Z"
+    },
+    {
+      "id": 1779,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "SC Corinthians Paulista",
+      "shortName": "Corinthians",
+      "tla": "COR",
+      "crestUrl": null,
+      "address": "Rua São Jorge 777, Tatuapé São Paulo, SP 03087-000",
+      "phone": "+55 (11) 61953000",
+      "website": "http://www.corinthians.com.br",
+      "email": "contato@corinthiansfutebol.com.br",
+      "founded": 1910,
+      "clubColors": "Black / White",
+      "venue": "Arena Corinthians",
+      "lastUpdated": "2019-07-18T02:18:47Z"
+    },
+    {
+      "id": 1780,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "CR Vasco da Gama",
+      "shortName": "Vasco da Gama",
+      "tla": "VAS",
+      "crestUrl": null,
+      "address": "Rua Gen. Almério de Moura 131, Bairro Vasco da Gama Rio de Janeiro, RJ 20921-060",
+      "phone": "+55 (21) 21767373",
+      "website": "http://www.vasco.com.br",
+      "email": "contato@vascoonline.net",
+      "founded": 1898,
+      "clubColors": "Black / White",
+      "venue": "Estádio Club de Regatas Vasco da Gama",
+      "lastUpdated": "2019-07-18T02:18:48Z"
+    },
+    {
+      "id": 1783,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "CR Flamengo",
+      "shortName": "Flamengo",
+      "tla": "FLA",
+      "crestUrl": "",
+      "address": "Av. Borges de Medeiros 997, Lagoa Rio de Janeiro, RJ 22430-041",
+      "phone": "+55 (21) 25290100",
+      "website": "http://www.flamengo.com.br",
+      "email": "flafutebol@flamengo.com.br",
+      "founded": 1895,
+      "clubColors": "Red / Black",
+      "venue": "Estadio Jornalista Mário Filho",
+      "lastUpdated": "2019-07-18T02:18:50Z"
+    },
+    {
+      "id": 1837,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Ceará SC",
+      "shortName": "Ceará",
+      "tla": "CSC",
+      "crestUrl": null,
+      "address": "Av. João Pessoa 3532, Porangabuçu Fortaleza, CE 60425-680",
+      "phone": "+55 (85) 30239040",
+      "website": "http://www.cearasc.com",
+      "email": "redessociais@cearasc.com",
+      "founded": 1914,
+      "clubColors": "Black / White",
+      "venue": "Estádio Castelão",
+      "lastUpdated": "2019-07-18T02:18:51Z"
+    },
+    {
+      "id": 3984,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Fortaleza EC",
+      "shortName": "Fortaleza",
+      "tla": "FEC",
+      "crestUrl": null,
+      "address": "Avenida Senador Fernandes Távora 200, Pici Fortaleza, CE 60510-290",
+      "phone": "+55 (85) 34962846",
+      "website": "http://www.fortalezaec.net",
+      "email": "contato@fortalezaec.net",
+      "founded": 1918,
+      "clubColors": "Red / Blue / White",
+      "venue": "Estádio Castelão",
+      "lastUpdated": "2019-07-18T02:18:52Z"
+    },
+    {
+      "id": 4244,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "CS Alagoano",
+      "shortName": "Alagoano",
+      "tla": "CSA",
+      "crestUrl": null,
+      "address": "Avenida Major Cícero de Goes Monteiro 2593, Mutange Maceió, AL 57030-320",
+      "phone": "+55 (82) 33383698",
+      "website": "http://www.centrosportivoalagoano.com",
+      "email": null,
+      "founded": 1913,
+      "clubColors": "Blue / White",
+      "venue": "Estádio Rei Pelé",
+      "lastUpdated": "2019-07-18T02:18:53Z"
+    },
+    {
+      "id": 4250,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Goiás EC",
+      "shortName": "Goiás",
+      "tla": "GOI",
+      "crestUrl": null,
+      "address": "Av. Edmundo Pinheiro de Abreu 721, Setor Bela Vista Goiás 74823-030",
+      "phone": "+55 (62) 39467435",
+      "website": "http://www.goiasec.com.br",
+      "email": null,
+      "founded": 1943,
+      "clubColors": "Green / White",
+      "venue": "Estádio de Hailé Pinheiro",
+      "lastUpdated": "2019-07-18T02:18:55Z"
+    },
+    {
+      "id": 6684,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "SC Internacional",
+      "shortName": "Internacional",
+      "tla": "INT",
+      "crestUrl": null,
+      "address": "Avenida Padre Cacique 891, Bairro Menino Deus Porto Alegre, RS 90810-240",
+      "phone": "+55 (51) 32304600",
+      "website": "http://www.internacional.com.br",
+      "email": "ouvidoria@internacional.com.br",
+      "founded": 1909,
+      "clubColors": "Red / White",
+      "venue": "Estádio José Pinheiro Borba",
+      "lastUpdated": "2019-07-18T02:18:56Z"
+    },
+    {
+      "id": 6685,
+      "area": {
+        "id": 2032,
+        "name": "Brazil"
+      },
+      "name": "Santos FC",
+      "shortName": "Santos",
+      "tla": "SAN",
+      "crestUrl": null,
+      "address": "Rua Princesa Isabel S/N, Vila Belmiro Santos, SP 11075-501",
+      "phone": "+55 (13) 32574000",
+      "website": "http://santosfc.com.br",
+      "email": "imprensa@santosfc.com.br",
+      "founded": 1912,
+      "clubColors": "Black / White",
+      "venue": "Estádio Urbano Caldeira",
+      "lastUpdated": "2019-07-18T02:18:58Z"
+    }
+  ]
+}

@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">Football Fixtures</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Field</string>
+    <string name="title_fixtures">Fixtures</string>
+    <string name="title_competitions">Competitions</string>
+    <string name="competition_arrow_icon_content_description">Open details</string>
+
+    <string name="connect_exception">Could not connect to the server. Please check your internet connection and try
+        again.
+    </string>
+    <string name="unknown_host_exception">Couldn\'t connect to the server. Please check your internet connection
+    </string>
+    <string name="timed_out_exception">Request timed out while trying to connect. Please ensure you have a strong signal
+        and try again.
+    </string>
+    <string name="unknown_exception">An unexpected error has occurred. Please check your network connection and try
+        again.
+    </string>
+    <string name="retry">Retry</string>
+    <string name="error_layout_icon_content_description">Soccer</string>
+    <string name="press_to_exit">Press again to exit</string>
+    <string name="loading">Loading…</string>
+    <string name="no_fixtures_msg">No fixtures, please try again later</string>
+    <string name="no_competitions_msg">No competitions, please try again later</string>
+    <string name="title_table">Table</string>
+    <string name="title_teams">Teams</string>
+    <string name="title_todays_fixtures">Today\'s Fixtures</string>
+    <string name="no_table_msg">No table data, please try again</string>
+    <string name="teams_logo_content_desc">Team Logo</string>
+    <string name="no_team_msg">No team data, please try again</string>
+    <string name="md_text">MD: 35</string>
+    <string name="score_text">00</string>
 </resources>

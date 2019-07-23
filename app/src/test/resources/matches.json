@@ -1,0 +1,220 @@
+{
+  "count": 142,
+  "filters": {
+    "dateFrom": "2019-05-05",
+    "dateTo": "2019-05-15",
+    "permission": "TIER_ONE"
+  },
+  "matches": [
+    {
+      "id": 262418,
+      "competition": {
+        "id": 2013,
+        "name": "Série A"
+      },
+      "season": {
+        "id": 460,
+        "startDate": "2019-04-28",
+        "endDate": "2019-12-08",
+        "currentMatchday": 10,
+        "winner": null
+      },
+      "utcDate": "2019-05-04T22:00:00Z",
+      "status": "FINISHED",
+      "matchday": 3,
+      "stage": "REGULAR_SEASON",
+      "group": "Regular Season",
+      "lastUpdated": "2019-05-08T19:32:06Z",
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": 1,
+          "awayTeam": 1
+        },
+        "halfTime": {
+          "homeTeam": 1,
+          "awayTeam": 1
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 1780,
+        "name": "CR Vasco da Gama"
+      },
+      "awayTeam": {
+        "id": 1779,
+        "name": "SC Corinthians Paulista"
+      },
+      "referees": [
+        {
+          "id": 11137,
+          "name": "Rodrigo D'Alonso Ferreira",
+          "nationality": null
+        },
+        {
+          "id": 11174,
+          "name": "Kleber Lucio Gil",
+          "nationality": null
+        },
+        {
+          "id": 56374,
+          "name": "Carlos Berkenbrock",
+          "nationality": null
+        },
+        {
+          "id": 19145,
+          "name": "João Ennio Sobral",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 262419,
+      "competition": {
+        "id": 2013,
+        "name": "Série A"
+      },
+      "season": {
+        "id": 460,
+        "startDate": "2019-04-28",
+        "endDate": "2019-12-08",
+        "currentMatchday": 10,
+        "winner": null
+      },
+      "utcDate": "2019-05-04T22:00:00Z",
+      "status": "FINISHED",
+      "matchday": 3,
+      "stage": "REGULAR_SEASON",
+      "group": "Regular Season",
+      "lastUpdated": "2019-05-08T19:32:06Z",
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": 1,
+          "awayTeam": 0
+        },
+        "halfTime": {
+          "homeTeam": 1,
+          "awayTeam": 0
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 1769,
+        "name": "SE Palmeiras"
+      },
+      "awayTeam": {
+        "id": 6684,
+        "name": "SC Internacional"
+      },
+      "referees": [
+        {
+          "id": 11277,
+          "name": "Wagner do Nascimento Magalhaes",
+          "nationality": null
+        },
+        {
+          "id": 60916,
+          "name": "Fabio Pereira",
+          "nationality": null
+        },
+        {
+          "id": 11278,
+          "name": "Thiago Henrique Neto Correa Farinha",
+          "nationality": null
+        },
+        {
+          "id": 55942,
+          "name": "Ilbert Estevam Da Silva",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 262420,
+      "competition": {
+        "id": 2013,
+        "name": "Série A"
+      },
+      "season": {
+        "id": 460,
+        "startDate": "2019-04-28",
+        "endDate": "2019-12-08",
+        "currentMatchday": 10,
+        "winner": null
+      },
+      "utcDate": "2019-05-05T00:00:00Z",
+      "status": "FINISHED",
+      "matchday": 3,
+      "stage": "REGULAR_SEASON",
+      "group": "Regular Season",
+      "lastUpdated": "2019-05-08T19:32:06Z",
+      "score": {
+        "winner": "AWAY_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": 1,
+          "awayTeam": 2
+        },
+        "halfTime": {
+          "homeTeam": 1,
+          "awayTeam": 1
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 1837,
+        "name": "Ceará SC"
+      },
+      "awayTeam": {
+        "id": 1766,
+        "name": "CA Mineiro"
+      },
+      "referees": [
+        {
+          "id": 11237,
+          "name": "Flavio Rodrigues De Souza",
+          "nationality": null
+        },
+        {
+          "id": 11238,
+          "name": "Alex Ang Ribeiro",
+          "nationality": null
+        },
+        {
+          "id": 11211,
+          "name": "Bruno Salgado Rizo",
+          "nationality": null
+        },
+        {
+          "id": 18978,
+          "name": "Luis César De Oliveira Magalhães",
+          "nationality": null
+        }
+      ]
+    }
+  ]
+}

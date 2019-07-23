@@ -1,0 +1,147 @@
+{
+  "count": 380,
+  "filters": {},
+  "competition": {
+    "id": 2013,
+    "area": {
+      "id": 2032,
+      "name": "Brazil"
+    },
+    "name": "Série A",
+    "code": "BSA",
+    "plan": "TIER_ONE",
+    "lastUpdated": "2019-07-20T00:00:01Z"
+  },
+  "matches": [
+    {
+      "id": 262393,
+      "season": {
+        "id": 460,
+        "startDate": "2019-04-28",
+        "endDate": "2019-12-08",
+        "currentMatchday": 11
+      },
+      "utcDate": "2019-04-27T19:00:00Z",
+      "status": "FINISHED",
+      "matchday": 1,
+      "stage": "REGULAR_SEASON",
+      "group": "Regular Season",
+      "lastUpdated": "2019-05-01T19:32:07Z",
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": 2,
+          "awayTeam": 0
+        },
+        "halfTime": {
+          "homeTeam": 1,
+          "awayTeam": 0
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 1776,
+        "name": "São Paulo FC"
+      },
+      "awayTeam": {
+        "id": 1770,
+        "name": "Botafogo FR"
+      },
+      "referees": [
+        {
+          "id": 56387,
+          "name": "Caio Max Augusto Vieira",
+          "nationality": null
+        },
+        {
+          "id": 11186,
+          "name": "Guilherme Dias Camilo",
+          "nationality": null
+        },
+        {
+          "id": 11187,
+          "name": "Sidmar dos Santos Meurer",
+          "nationality": null
+        },
+        {
+          "id": 19033,
+          "name": "Pablo Ramón Goncalves Pinheiro",
+          "nationality": null
+        }
+      ]
+    },
+    {
+      "id": 262402,
+      "season": {
+        "id": 460,
+        "startDate": "2019-04-28",
+        "endDate": "2019-12-08",
+        "currentMatchday": 11
+      },
+      "utcDate": "2019-04-27T22:00:00Z",
+      "status": "FINISHED",
+      "matchday": 1,
+      "stage": "REGULAR_SEASON",
+      "group": "Regular Season",
+      "lastUpdated": "2019-05-01T19:32:07Z",
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "homeTeam": 2,
+          "awayTeam": 0
+        },
+        "halfTime": {
+          "homeTeam": 1,
+          "awayTeam": 0
+        },
+        "extraTime": {
+          "homeTeam": null,
+          "awayTeam": null
+        },
+        "penalties": {
+          "homeTeam": null,
+          "awayTeam": null
+        }
+      },
+      "homeTeam": {
+        "id": 1772,
+        "name": "Chapecoense AF"
+      },
+      "awayTeam": {
+        "id": 6684,
+        "name": "SC Internacional"
+      },
+      "referees": [
+        {
+          "id": 11260,
+          "name": "Raphael Claus",
+          "nationality": null
+        },
+        {
+          "id": 11468,
+          "name": "Marcelo Carvalho Van Gasse",
+          "nationality": null
+        },
+        {
+          "id": 11262,
+          "name": "Danilo Ricardo Simon Manis",
+          "nationality": null
+        },
+        {
+          "id": 19019,
+          "name": "Douglas Marques das Flores",
+          "nationality": null
+        }
+      ]
+    }
+  ]
+}
