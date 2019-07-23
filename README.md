@@ -3,7 +3,7 @@
 An android app that consumes data from [ https://www.football-data.org]( https://www.football-data.org), completely written in [Kotlin][kotlin]
 <br />
 
-##API Key
+## API Key
 Get your free api  [here](https://www.football-data.org/client/register) <br/>
 Place it in `app/build.gradle`
 ```
@@ -28,6 +28,7 @@ Fully compatible with [Android Q][android-q], supporting light and [dark theme][
 * [Espresso][espresso] for UI tests
 * [Mockk][mockk] for mocking in tests
 * [Dagger2][dagger2] for dependency injection
+* [RxJava2][rxjava2] for concurrency
 
 
 
@@ -44,6 +45,7 @@ Fully compatible with [Android Q][android-q], supporting light and [dark theme][
 [android-q]: https://developer.android.com/preview
 [dark-theme]: https://developer.android.com/preview/features/darktheme
 [constraint-layout]: https://developer.android.com/reference/android/support/constraint/ConstraintLayout
+[rxjava2]: https://github.com/ReactiveX/RxJava
 
 ## Screenshots
 ### Dark
