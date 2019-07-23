@@ -8,12 +8,12 @@ Get your free api  [here](https://www.football-data.org/client/register) <br/>
 Place it in `app/build.gradle`
 ```
 android {
-defaultConfig {
-   ...
-    buildConfigField("String", "API_TOKEN", "\"PLACE_YOUR_API_KEY_HERE\"")
-   ...
-}
-...
+    defaultConfig {
+       ...
+        buildConfigField("String", "API_TOKEN", "\"PLACE_YOUR_API_KEY_HERE\"")
+       ...
+    }
+    ...
 }
 ```
 Fully compatible with [Android Q][android-q], supporting light and [dark theme][dark-theme] (see screenshots)
@@ -29,6 +29,7 @@ Fully compatible with [Android Q][android-q], supporting light and [dark theme][
 * [Mockk][mockk] for mocking in tests
 * [Dagger2][dagger2] for dependency injection
 * [RxJava2][rxjava2] for concurrency
+* [Room][room] for database
 
 
 
@@ -46,6 +47,7 @@ Fully compatible with [Android Q][android-q], supporting light and [dark theme][
 [dark-theme]: https://developer.android.com/preview/features/darktheme
 [constraint-layout]: https://developer.android.com/reference/android/support/constraint/ConstraintLayout
 [rxjava2]: https://github.com/ReactiveX/RxJava
+[room]: https://developer.android.com/topic/libraries/architecture/room
 
 ## Screenshots
 ### Dark
