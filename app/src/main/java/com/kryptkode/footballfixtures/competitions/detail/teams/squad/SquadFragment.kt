@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.fragment.BaseFragment
@@ -29,6 +30,7 @@ class SquadFragment @Inject constructor() :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        idlingResource?.setIdleState(false)
         initViews()
         initObservers()
         loadData()
@@ -82,16 +84,13 @@ class SquadFragment @Inject constructor() :
                 AttrUtils.convertAttrToColor(R.attr.colorError, binding.root.context)
             )
         }
-
-        (activity as SquadActivity?)?.setSupportActionBar(binding.toolbar)
-
         binding.toolbar.setNavigationIcon(R.drawable.ic_close)
         binding.toolbar.setNavigationOnClickListener {
             viewModel.handleNavigationIconClick()
         }
 
         val team = getTeam()
-        binding.tvTitle.text = team?.name
+        binding.tvTitle.text = team?.name ?: getString(R.string.app_name)
 
         ImageLoader()
             .with(binding.imgTeamLogo)
@@ -107,6 +106,15 @@ class SquadFragment @Inject constructor() :
         binding.recyclerView.addItemDecoration(
             ItemDivider(context)
         )
+
+        binding.recyclerView.adapter?.registerAdapterDataObserver(
+            object : RecyclerView.AdapterDataObserver() {
+                override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
+                    idlingResource?.setIdleState(true)
+                }
+            }
+        )
+
         binding.swipeRefreshLayout.setOnRefreshListener {
             refresh()
         }

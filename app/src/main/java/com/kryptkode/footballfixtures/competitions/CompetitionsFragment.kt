@@ -2,15 +2,14 @@ package com.kryptkode.footballfixtures.competitions
 
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.fragment.BaseFragment
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
-import com.kryptkode.footballfixtures.app.utils.Constants
 import com.kryptkode.footballfixtures.app.utils.NetworkState
 import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider
@@ -23,8 +22,12 @@ import javax.inject.Inject
 class CompetitionsFragment @Inject constructor() :
     BaseFragment<FragmentCompetitionBinding, CompetitionViewModel>() {
 
+    @VisibleForTesting
+    var clickItem: Competition? = null
+
     private val competitionsListener = object : CompetitionsListener {
         override fun onItemClick(competition: Competition?) {
+            clickItem = competition
             viewModel.handleItemClick(competition)
         }
     }
@@ -33,6 +36,7 @@ class CompetitionsFragment @Inject constructor() :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        idlingResource?.setIdleState(false)
         initViews()
         initObservers()
         loadData()
@@ -70,8 +74,7 @@ class CompetitionsFragment @Inject constructor() :
         })
 
         viewModel.openDetail.observe(this, Observer {
-            val data = Bundle()
-            data.putParcelable(Constants.EXTRAS, it)
+            val data = CompetitionsDetailActivity.getBundleExtras(it)
             startNewActivity(CompetitionsDetailActivity::class.java, data = data)
         })
     }
@@ -83,6 +86,14 @@ class CompetitionsFragment @Inject constructor() :
         binding.recyclerView.addItemDecoration(
             ItemDivider(context)
         )
+        binding.recyclerView.adapter?.registerAdapterDataObserver(
+            object : RecyclerView.AdapterDataObserver() {
+                override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
+                    idlingResource?.setIdleState(true)
+                }
+            }
+        )
+
         binding.swipeRefreshLayout.setOnRefreshListener {
             refresh()
         }

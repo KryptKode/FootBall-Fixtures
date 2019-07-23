@@ -1,108 +1,105 @@
 package com.kryptkode.footballfixtures.app.data.mock
 
+import androidx.lifecycle.MutableLiveData
+import androidx.paging.DataSource
+import androidx.paging.PageKeyedDataSource
+import com.google.gson.Gson
+import com.kryptkode.footballfixtures.R
+import com.kryptkode.footballfixtures.app.data.api.models.*
 import com.kryptkode.footballfixtures.app.data.models.competition.Competition
 import com.kryptkode.footballfixtures.app.data.models.fixtures.Match
 import com.kryptkode.footballfixtures.app.data.models.squad.Squad
 import com.kryptkode.footballfixtures.app.data.models.table.Table
 import com.kryptkode.footballfixtures.app.data.models.team.Team
-import com.kryptkode.footballfixtures.app.utils.DateTimeUtils
-import org.junit.Assert.*
-import java.util.*
+import com.kryptkode.footballfixtures.app.utils.AssetsLoader
+import com.kryptkode.footballfixtures.app.utils.NetworkState
+import io.reactivex.disposables.CompositeDisposable
+import timber.log.Timber
+import javax.inject.Inject
 
-object FakeDataSource {
-    fun getFakeMatches(size: Int): MutableList<Match> {
-        val list = mutableListOf<Match>()
-        for (i in 0 until size) {
-            list.add(
-                Match(
-                    i,
-                    Competition(i, "Competition$i"),
-                    0,
-                    DateTimeUtils.formatDate(Date()),
-                    "Status $i",
-                    "",
-                    null,
-                    null,
-                    null,
-                    null
-                )
-            )
-        }
+class FakeDataSource @Inject constructor(private val assetsLoader: AssetsLoader, val gson: Gson) {
 
-        return list
+    fun getFakeMatches(size: Int): List<Match> {
+        val data = assetsLoader.getRawResourceDataAsString("today_matches")
+        return gson.fromJson(data, TodaysFixturesResponse::class.java).matches.subList(0, size)
     }
 
-    fun getFakeMatch(): Match {
-        return Match(
-            1,
-            Competition(1, "Competition$1"),
+    fun getCompetitions(size: Int): List<Competition>? {
+        val data = assetsLoader.getRawResourceDataAsString("competitions")
+        return gson.fromJson(data, CompetitionResponse::class.java).competitions?.subList(0, size)
+    }
+
+
+    fun getFakeSquad(size: Int): List<Squad>? {
+        val data = assetsLoader.getRawResourceDataAsString("teams_detail")
+        return gson.fromJson(data, SquadResponse::class.java).squad?.subList(0, size)
+    }
+
+    fun getFakeTable(size: Int): List<Table>? {
+        val data = assetsLoader.getRawResourceDataAsString("standings")
+        return gson.fromJson(data, TableResponse::class.java).standings?.get(0)?.table?.subList(
             0,
-            DateTimeUtils.formatDate(Date()),
-            "Status $1",
-            "",
-            null,
-            null,
-            null,
-            null
+            size
         )
     }
 
-    fun getCompetitions(size: Int): MutableList<Competition> {
-        val list = mutableListOf<Competition>()
-        for (i in 0 until size) {
-            list.add(
-                Competition(i, "Competition$i")
-            )
+    fun getFakeTeams(size: Int): List<Team>? {
+        val data = assetsLoader.getRawResourceDataAsString("teams")
+        return gson.fromJson(data, TeamResponse::class.java).teams?.subList(0, size)
+    }
+}
+
+class FakeKeyedDataSource<T>(val list: List<T>?) : PageKeyedDataSource<Int, T>() {
+    val disposable = CompositeDisposable()
+    val networkState = MutableLiveData<NetworkState>()
+
+    override fun loadInitial(
+        params: LoadInitialParams<Int>,
+        callback: LoadInitialCallback<Int, T>
+    ) {
+        if (networkState.value == NetworkState.LOADING) {
+            return
+        }
+        networkState.postValue(NetworkState.LOADING)
+        try {
+            callback.onResult(list ?: listOf(), null, null)
+            networkState.postValue(NetworkState.LOADED)
+        } catch (e: Exception) {
+            Timber.e(e)
+            networkState.postValue(NetworkState.error(R.string.unknown_exception))
         }
 
-        return list
     }
 
-    fun getFakeCompetition(): Competition {
-        return Competition(1, "Competition$1")
-    }
-
-    fun getFakeSquad(size: Int): MutableList<Squad> {
-        val list = mutableListOf<Squad>()
-        for (i in 0 until size) {
-            list.add(
-                Squad(
-                    i,
-                    "Status $i",
-                    "Position $i",
-                    1
-                )
-            )
+    override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, T>) {
+        if (networkState.value == NetworkState.LOADING) {
+            return
         }
-
-        return list
+        networkState.value = NetworkState.LOADING
+        try {
+            callback.onResult(list ?: listOf(), null)
+            networkState.value = NetworkState.LOADED
+        } catch (e: Exception) {
+            Timber.e(e)
+            networkState.value = NetworkState.error(R.string.unknown_exception)
+        }
     }
 
-    fun getFakeTable(size: Int, competitionId:Int): MutableList<Table> {
-        val list = mutableListOf<Table>()
-        for (i in 1 .. size) {
-            list.add(
-                Table(
-                    competitionId,
-                    i,
-                    i,
-                    Team(competitionId, i, "", "", "", ""),
-                    i, i, i, i, i, i, i, i
-                )
-            )
+    override fun loadBefore(params: LoadParams<Int>, callback: LoadCallback<Int, T>) {
+        networkState.value = NetworkState.LOADING
+        try {
+            callback.onResult(list ?: listOf(), null)
+            networkState.value = NetworkState.LOADED
+        } catch (e: Exception) {
+            Timber.e(e)
+            networkState.value = NetworkState.error(R.string.unknown_exception)
         }
-
-        return list
     }
+}
 
-    fun getFakeTeams(size: Int): MutableList<Team> {
-        val list = mutableListOf<Team>()
-        for (i in 0 until size) {
-            list.add(
-                Team(1, i, "", "", "", "")
-            )
-        }
-
-        return list
+class FakeDataSourceFactory<T>(list: List<T>?) : DataSource.Factory<Int, T>() {
+    val factory = FakeKeyedDataSource(list)
+    override fun create(): DataSource<Int, T> {
+        return factory
     }
 }

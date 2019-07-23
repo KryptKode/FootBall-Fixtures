@@ -1,14 +1,13 @@
 package com.kryptkode.footballfixtures.todaysfixtures
 
-import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.kryptkode.footballfixtures.app.base.viewmodel.BaseViewModel
-import com.kryptkode.footballfixtures.app.data.repo.AppRepository
+import com.kryptkode.footballfixtures.app.base.viewmodel.BaseRepoViewModel
+import com.kryptkode.footballfixtures.app.data.repo.Repository
 import javax.inject.Inject
 
 class TodaysFixturesViewModel @Inject constructor(
-    private val repository: AppRepository) : BaseViewModel(){
+      repository: Repository) : BaseRepoViewModel(repository) {
 
     private val blank = MutableLiveData<Unit>()
     private var loaded = false

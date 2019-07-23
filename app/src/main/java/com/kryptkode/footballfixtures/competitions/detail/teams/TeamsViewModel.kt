@@ -1,19 +1,18 @@
 package com.kryptkode.footballfixtures.competitions.detail.teams
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.kryptkode.footballfixtures.app.base.viewmodel.BaseViewModel
+import com.kryptkode.footballfixtures.app.base.viewmodel.BaseRepoViewModel
 import com.kryptkode.footballfixtures.app.data.models.team.Team
-import com.kryptkode.footballfixtures.app.data.repo.AppRepository
+import com.kryptkode.footballfixtures.app.data.repo.Repository
 import com.kryptkode.footballfixtures.app.utils.SingleLiveEvent
 import timber.log.Timber
 import javax.inject.Inject
 
 class TeamsViewModel @Inject constructor(
-    private val repository: AppRepository
-) : BaseViewModel() {
+    repository: Repository
+) : BaseRepoViewModel(repository) {
 
     private val blank = MutableLiveData<Int>()
     private var loaded = false

@@ -20,12 +20,12 @@ class AppRepository @Inject constructor(
     private val dbManager: DbManager,
     private val apiManager: ApiManager,
     private val errorHandler: ErrorHandler
-) {
+) : Repository {
 
     /**
      * Get competitions
      */
-    fun getCompetitions(): Listing<Competition> {
+    override fun getCompetitions(): Listing<Competition> {
 
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getCompetitions()
@@ -73,7 +73,7 @@ class AppRepository @Inject constructor(
     /**
      * Get today's fixtures
      */
-    fun getMatches(): Listing<Match> {
+    override fun getMatches(): Listing<Match> {
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getMatches()
 
@@ -121,7 +121,7 @@ class AppRepository @Inject constructor(
      * Get table for a particular competition
      * @param competitionId The ID of the competition
      */
-    fun getTableForCompetition(competitionId: Int?): Listing<Table> {
+    override fun getTableForCompetition(competitionId: Int?): Listing<Table> {
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getTables(competitionId)
 
@@ -170,7 +170,7 @@ class AppRepository @Inject constructor(
      * Get team data for a particular competition
      * @param competitionId The ID of the competition
      */
-    fun getTeamsForCompetition(competitionId: Int?): Listing<Team> {
+    override fun getTeamsForCompetition(competitionId: Int?): Listing<Team> {
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getTeams(competitionId)
 
@@ -219,7 +219,7 @@ class AppRepository @Inject constructor(
      * Get squad data for a particular team
      * @param teamId The team ID
      */
-    fun getSquadForTeam(teamId: Int?): Listing<Squad> {
+    override fun getSquadForTeam(teamId: Int?): Listing<Squad> {
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getSquad(teamId)
 
@@ -268,7 +268,7 @@ class AppRepository @Inject constructor(
      * Get matches data for a particular competition
      * @param competitionId The ID of the competition
      */
-    fun getFixturesForCompetition(competitionId: Int?): Listing<Match> {
+    override fun getFixturesForCompetition(competitionId: Int?): Listing<Match> {
         // Get data source factory from the local cache
         val dataSourceFactory = dbManager.getMatchesForCompetition(competitionId)
 
@@ -313,9 +313,8 @@ class AppRepository @Inject constructor(
     }
 
 
-
     companion object {
-        private const val DATABASE_PAGE_SIZE = 10
+        const val DATABASE_PAGE_SIZE = 10
         const val DATABASE_INITIAL_PAGE_SIZE = 20
     }
 

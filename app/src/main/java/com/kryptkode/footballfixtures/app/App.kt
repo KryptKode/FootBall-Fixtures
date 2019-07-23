@@ -8,9 +8,9 @@ import dagger.android.support.DaggerApplication
 
 import timber.log.Timber
 
-class App : DaggerApplication() {
+open class App : DaggerApplication() {
 
-    private val appComponent by lazy {
+    open val appComponent by lazy {
         DaggerAppComponent
             .builder()
             .bindApplication(this)

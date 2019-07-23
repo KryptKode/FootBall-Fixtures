@@ -14,6 +14,14 @@ import javax.inject.Inject
 class CompetitionsDetailActivity :
     BaseViewModelActivity<ActivityCompetitonDetailBinding, CompetitionsDetailViewModel>() {
 
+    companion object {
+        fun getBundleExtras(competition: Competition): Bundle {
+            val data = Bundle()
+            data.putParcelable(Constants.EXTRAS, competition)
+            return data
+        }
+    }
+
     @Inject
     lateinit var fragmentListProvider: FragmentsListProvider
 
@@ -50,9 +58,7 @@ class CompetitionsDetailActivity :
         setActionBarTitle(competition?.name ?: getString(R.string.app_name))
         binding.viewPager.adapter = adapter
         binding.tabLayout.setupWithViewPager(binding.viewPager)
-
     }
-
 
     override fun getLayoutResourceId() = R.layout.activity_competiton_detail
 

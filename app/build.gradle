@@ -14,7 +14,7 @@ android {
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.kryptkode.footballfixtures.app.CustomTestRunner"
         vectorDrawables.useSupportLibrary true
         multiDexEnabled true
 
@@ -126,15 +126,21 @@ dependencies {
 
     implementation 'com.r0adkll:slidableactivity:2.0.6'
 
+
+    //noinspection GradleDependency
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
+
     // unit testing
     testImplementation "junit:junit:$junitVersion"
     testImplementation "android.arch.core:core-testing:$coreTesting"
     testImplementation "io.mockk:mockk:$mockkVersion"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    //noinspection GradleDependency
     testImplementation "com.squareup.okhttp3:mockwebserver:3.9.0"
     testImplementation 'org.robolectric:robolectric:4.2'
     testImplementation "com.google.dagger:dagger:$daggerVersion"
     kaptTest "com.google.dagger:dagger-compiler:$daggerVersion"
+
     debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
 
 
@@ -143,8 +149,13 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$runnerVersion"
     androidTestImplementation "android.arch.core:core-testing:$coreTesting"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoVersion"
     androidTestImplementation "androidx.test:runner:$testRunner"
     androidTestImplementation "androidx.test:rules:$testRunner"
     androidTestImplementation "androidx.test.ext:junit:$androidJunit"
+    androidTestImplementation "io.mockk:mockk-android:$mockkVersion"
     androidTestImplementation 'android.arch.persistence.room:testing:1.1.1'
+    androidTestImplementation "com.google.dagger:dagger:$daggerVersion"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$daggerVersion"
 }

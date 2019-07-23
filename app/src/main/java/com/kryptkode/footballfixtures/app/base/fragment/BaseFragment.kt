@@ -9,12 +9,14 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.annotation.LayoutRes
+import androidx.annotation.VisibleForTesting
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.kryptkode.footballfixtures.app.base.activity.BaseActivity
 import com.kryptkode.footballfixtures.app.base.viewmodel.BaseViewModel
+import com.kryptkode.footballfixtures.app.utils.AppIdlingResource
 import com.kryptkode.footballfixtures.app.utils.NetworkUtils
 import dagger.android.support.DaggerFragment
 import timber.log.Timber
@@ -23,8 +25,12 @@ import javax.inject.Inject
 abstract class BaseFragment<D, V> : DaggerFragment() where D : ViewDataBinding, V : BaseViewModel {
 
 
+    protected var idlingResource: AppIdlingResource? = null
+
     protected lateinit var binding: D
-    protected lateinit var viewModel: V
+
+    @VisibleForTesting
+    lateinit var viewModel: V
 
 
     @Inject
@@ -101,7 +107,7 @@ abstract class BaseFragment<D, V> : DaggerFragment() where D : ViewDataBinding, 
     }
 
 
-     fun showView(view: View, textView: TextView, message: String) {
+    fun showView(view: View, textView: TextView, message: String) {
         if (activity is BaseActivity) {
             Timber.d("showView: animating view upwards")
             (activity as BaseActivity).showView(view, textView, message)
@@ -110,7 +116,7 @@ abstract class BaseFragment<D, V> : DaggerFragment() where D : ViewDataBinding, 
         }
     }
 
-     fun hideView(view: View) {
+    fun hideView(view: View) {
         if (activity is BaseActivity) {
             Timber.d("hideView: animating view downwards")
             (activity as BaseActivity).hideView(view)
@@ -170,6 +176,12 @@ abstract class BaseFragment<D, V> : DaggerFragment() where D : ViewDataBinding, 
         }
     }
 
+    fun provideIdlingResource(): AppIdlingResource? {
+        if (idlingResource == null) {
+            idlingResource = AppIdlingResource()
+        }
+        return idlingResource
+    }
 
     @LayoutRes
     protected abstract fun getLayoutResourceId(): Int

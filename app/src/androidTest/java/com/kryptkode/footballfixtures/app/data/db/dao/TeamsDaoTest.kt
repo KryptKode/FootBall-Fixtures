@@ -1,8 +1,6 @@
 package com.kryptkode.footballfixtures.app.data.db.dao
 
-import android.util.Log
-import com.kryptkode.footballfixtures.app.data.mock.FakeDataSource
-import org.junit.Assert.*
+import com.kryptkode.footballfixtures.app.data.mock.FakeDbData
 import org.junit.Test
 
 class TeamsDaoTest : BaseDaoTest<TeamsDao>() {
@@ -17,7 +15,7 @@ class TeamsDaoTest : BaseDaoTest<TeamsDao>() {
 
     @Test
     fun onInsertingTeams_checkIf_RowCountIsCorrect() {
-        val teams = FakeDataSource.getFakeTeams(5)
+        val teams = FakeDbData.getFakeTeams(5)
         dao?.insert(teams)
         val count = dao?.getTeamListForCompetition(1)?.size
         kotlin.test.assertEquals(5, count, "The row count should be 5")

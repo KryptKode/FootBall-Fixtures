@@ -2,6 +2,7 @@ package com.kryptkode.footballfixtures.competitions.detail.teams
 
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -22,8 +23,12 @@ import javax.inject.Inject
 
 class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, TeamsViewModel>() {
 
+    @VisibleForTesting
+    var clickedItem  : Team? = null
+
     private val teamListener = object : TeamListener {
         override fun onItemClick(item: Team?) {
+            clickedItem = item
             viewModel.handleItemClick(item)
         }
     }
@@ -32,6 +37,7 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        idlingResource?.setIdleState(false)
         initViews()
         initObservers()
         loadData()
@@ -69,10 +75,8 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
         })
 
         viewModel.openDetail.observe(this, Observer {
-            val data = Bundle()
-            data.putParcelable(Constants.EXTRAS, it)
+            val data = SquadActivity.getBundleExtra(it)
             startNewActivity(SquadActivity::class.java, data = data)
-
             activity?.overridePendingTransition(R.anim.slide_up_bottom,
                 R.anim.slide_down_top)
         })
@@ -88,6 +92,13 @@ class TeamsFragment @Inject constructor() : BaseFragment<FragmentTeamsBinding, T
                     R.dimen.teams_item_padding
                 ).toInt(), true
             )
+        )
+        binding.recyclerView.adapter?.registerAdapterDataObserver(
+            object : RecyclerView.AdapterDataObserver() {
+                override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
+                    idlingResource?.setIdleState(true)
+                }
+            }
         )
         binding.swipeRefreshLayout.setOnRefreshListener {
             refresh()

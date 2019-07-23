@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.kryptkode.footballfixtures.BR
 import com.kryptkode.footballfixtures.R
 import com.kryptkode.footballfixtures.app.base.fragment.BaseFragment
@@ -14,8 +15,6 @@ import com.kryptkode.footballfixtures.app.utils.Status
 import com.kryptkode.footballfixtures.app.views.ItemDivider
 import com.kryptkode.footballfixtures.competitions.detail.fixtures.adapter.FixturesAdapter
 import com.kryptkode.footballfixtures.databinding.FragmentFixturesBinding
-import com.kryptkode.footballfixtures.todaysfixtures.TodaysFixturesViewModel
-import com.kryptkode.footballfixtures.todaysfixtures.adapter.TodaysFixturesAdapter
 import javax.inject.Inject
 
 class FixturesFragment @Inject constructor() :
@@ -25,6 +24,7 @@ class FixturesFragment @Inject constructor() :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        idlingResource?.setIdleState(false)
         initViews()
         initObservers()
         loadData()
@@ -68,6 +68,14 @@ class FixturesFragment @Inject constructor() :
         binding.recyclerView.addItemDecoration(
             ItemDivider(context)
         )
+        binding.recyclerView.adapter?.registerAdapterDataObserver(
+            object : RecyclerView.AdapterDataObserver() {
+                override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
+                    idlingResource?.setIdleState(true)
+                }
+            }
+        )
+
         binding.swipeRefreshLayout.setOnRefreshListener {
             refresh()
         }

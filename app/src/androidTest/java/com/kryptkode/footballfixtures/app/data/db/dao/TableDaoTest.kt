@@ -1,8 +1,7 @@
 package com.kryptkode.footballfixtures.app.data.db.dao
 
-import android.util.Log
-import com.kryptkode.footballfixtures.app.data.mock.FakeDataSource
-import org.junit.Assert.*
+import com.kryptkode.footballfixtures.app.data.mock.FakeDbData
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import kotlin.test.assertEquals
 
@@ -18,7 +17,7 @@ class TableDaoTest : BaseDaoTest<TableDao>() {
 
     @Test
     fun onInsertingTable_checkIf_RowCountIsCorrect() {
-        val table = FakeDataSource.getFakeTable(5, 1)
+        val table = FakeDbData.getFakeTable(5, 1)
 
         dao?.insert(table)
 
@@ -28,7 +27,7 @@ class TableDaoTest : BaseDaoTest<TableDao>() {
 
     @Test
     fun should_Return_No_Table_Data_After_Deleting_All_Table_Data() {
-        val table = FakeDataSource.getFakeTable(5, 1)
+        val table = FakeDbData.getFakeTable(5, 1)
 
         dao?.insert(table)
 
