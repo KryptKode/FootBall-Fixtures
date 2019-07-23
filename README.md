@@ -2,6 +2,7 @@
 
 An android app that consumes data from [ https://www.football-data.org]( https://www.football-data.org), completely written in [Kotlin][kotlin]
 <br />
+Fully compatible with [Android Q][android-q], supporting light and [dark theme][dark-theme] (see screenshots)
 
 ## API Key
 Get your free api  [here](https://www.football-data.org/client/register) <br/>
@@ -16,7 +17,7 @@ android {
     ...
 }
 ```
-Fully compatible with [Android Q][android-q], supporting light and [dark theme][dark-theme] (see screenshots)
+
 
 ## Libraries
 * [AndroidX][androidx]
